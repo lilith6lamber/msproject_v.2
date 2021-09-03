@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C O N T A C T</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container-fluid navbar_container d-flex align-items-center justify-content-between">
+        <div class="navbar_brand d-flex align-items-center">
+            <button class="hamburger hamburger--minus" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a class="navbar_brand-link" href="index.html">Store</a>
+        </div>
+        <div class="navbar_user d-flex align-items-center">
+            <form class="navbar_user-search d-flex" action="">
+                <input class="navbar_user-search_input" type="text" name="searchQuery" id="searchQuery" placeholder="Search...">
+                <button class="navbar_user-search_btn" type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+            <div class="navbar_user-account d-flex align-items-center">
+                <a id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+            </div>
+            <div class="navbar_user-cart">
+                <a href="cart.html">
+                    <i class="icon-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navbar_container">
+        <ul class="navbar_submenu" id="navbar_submenu">
+            <li class="navbar_submenu-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="blog.html">Blog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <header class="header_contact header">
+        <div class="container d-flex flex-wrap align-items-center">
+            <h1 class="header_contact-title col-12 col-xl-7">Contact us</h1>
+            <p class="header_contact-subtitle col-12 col-xl-5">Looking Forward to Hearing From You.</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="contact_wrapper d-flex flex-wrap align-items-center">
+                <form class="col-12 col-lg-8 contact_form" method="POST" action="">
+                    <div class="fields_wrapper d-flex flex-wrap">
+                        <div class="contact_form-field col-12">
+                            <label class="contact_form-field_label" for="customer-name">Your name</label>
+                            <input class="contact_form-field_input" id="customer-name" type="text">
+                        </div>
+                        <div class="contact_form-field col-12">
+                            <label class="contact_form-field_label" for="customer-mail">Your email</label>
+                            <input class="contact_form-field_input" id="customer-mail" type="email" name="_replyto">
+                        </div>
+                    </div>
+                    <div class="contact_form-field col-12">
+                        <label class="contact_form-field_label" for="subject">Subject</label>
+                        <input class="contact_form-field_input" id="subject" type="text">
+                    </div>
+                    <div class="contact_form-field col-12">
+                        <label class="contact_form-field_label" for="message">Message</label>
+                        <textarea class="contact_form-field_input" id="message" name="message" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <button class="btn contact_form-btn" type="submit">Submit</button>
+                </form>
+                <div class="contact_info col-12 col-lg-4">
+                    <h4 class="contact_info-brand">Store</h4>
+                    <ul class="contact_info-list">
+                        <li>
+                            <p><i class="icon-map-marker"></i>1857 Alford Rapid Apt. 109</p>
+                        </li>
+                        <li class="d-flex">
+                            <i class="icon-phone"></i>
+                            <div class="wrapper">
+                                <a href="tel:+847245724">+(84) 7245 724</a>
+                                <a href="tel:+846585554">+(84) 6585 554</a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="icon-mail"></i>
+                            <a class="contact_info-list_mail"
+                                href="mailto:zetta_considine@tomasa.ca">zetta_considine@tomasa.ca</a>
+                        </li>
+                    </ul>
+                    <h4 class="contact_info-socials_title">Social networks</h4>
+                    <ul class="contact_info-socials_list d-flex">
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <i class="icon-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://google.com" target="_blank">
+                                <i class="icon-google"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="bottom">
+    <div class="container">
+        <h2 class="footer_brandname">Store</h2>
+        <nav class="footer_nav d-flex flex-wrap">
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">My Account</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">How to buy</a></li>
+                    <li><a href="javascript:void(0)">General Information</a></li>
+                    <li><a href="javascript:void(0)">Payment</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Returns</a></li>
+                    <li><a href="javascript:void(0)">Exchanges</a></li>
+                    <li><a href="javascript:void(0)">Gift Card</a></li>
+                    <li><a href="javascript:void(0)">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Company</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">About us</a></li>
+                    <li><a href="javascript:void(0)">Offices</a></li>
+                    <li><a href="javascript:void(0)">Stores</a></li>
+                    <li><a href="javascript:void(0)">Work with us</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Policies</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Gift Card Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="footer_socials d-flex justify-content-center">
+            <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a></li>
+        </ul>
+        <p class="footer_copy">Copyright &copy; 2018 | Hogash.com</p>
+    </div>
+</footer>
+<a href="javascript:void(0)" class="scroll_top"></a>
+<a href="#bottom" class="scroll_bottom"></a>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

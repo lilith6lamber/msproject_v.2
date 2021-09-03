@@ -1,0 +1,259 @@
+.about {
+    &_header {
+        background-image: url("../img/aboutbg.jpg");
+        padding: 100px 25px;
+        color: $text;
+        box-shadow: $shadow;
+        @include headerBg;
+        margin: 15px 15px 0;
+
+        &-title {
+            @include headerTitle($text, 32px);
+
+            &::after {
+                max-width: 50px;
+            }
+        }
+    }
+
+    &_founder {
+        .container {
+            padding: 15px 30px;
+        }
+
+        &-img_wrapper {
+            margin-top: 10px;
+            position: relative;
+            padding: 10px;
+
+            img {
+                @include imgFit;
+                object-fit: unset;
+                box-shadow: $shadow;
+                position: relative;
+                z-index: 2;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $text;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+
+        &-text {
+            &_name {
+                text-align: center;
+                font-family: $prt;
+                font-size: 32px;
+                font-weight: 400;
+                margin: 30px 0 20px;
+                letter-spacing: 3px;
+            }
+
+            &_wrapper {
+                text-align: justify;
+                word-break: break-all;
+                font-size: 12px;
+                @include ms_semibold;
+
+                p {
+                    text-indent: 20px;
+                    margin-bottom: 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    &_company {
+        margin-top: 15px;
+
+        &-text {
+            text-align: justify;
+            padding: 0 15px;
+
+            &_title {
+                text-align: center;
+                font-family: $prt;
+                font-weight: 400;
+                font-size: 32px;
+                letter-spacing: 2px;
+                margin: 30px 0 15px;
+            }
+
+            .paragraph {
+                font-size: 12px;
+                line-height: 20px;
+                font-family: $ms;
+                margin-bottom: 15px;
+                word-break: break-all;
+            }
+
+            &_img {
+                img {
+                    @include imgFit;
+                    object-fit: unset;
+                }
+            }
+        }
+    }
+
+    &_newsletter {
+        margin: 40px 0 0;
+        padding: 0 15px 40px;
+
+        &-title {
+            @include ms_bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        &-form {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: $news;
+            font-family: $ms;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &_input {
+                flex-grow: 2;
+
+                &::placeholder {
+                    @include ms_semibold;
+                    font-size: 12px;
+                    color: $placeholder;
+                }
+            }
+
+            &_btn {
+                &:hover {
+                    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 578.98px) {
+    .about {
+        &_founder {
+            &-img_wrapper {
+                img {
+                    max-width: 343px;
+                    margin: 30px 0 20px auto;
+                }
+                &::after {
+                    width: calc(100% - 120px);
+                    border-width: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .about {
+        &_header {
+            padding: 150px 50px;
+            margin: 20px 30px 0;
+
+            &-title {
+                @include headerTitle($text, 64px);
+
+                &::after {
+                    max-width: 150px;
+                }
+            }
+        }
+
+        &_founder {
+            margin-bottom: 50px;
+
+            .container {
+                padding: 0px 50px;
+            }
+
+            &-img_wrapper {
+                padding: 0;
+                img {
+                    max-width: calc(100% - 120px);
+                }
+            }
+
+            &-text {
+                &_name {
+                    text-align: left;
+                }
+            }
+        }
+
+        &_company {
+            position: relative;
+            min-height: 627px;
+            display: flex;
+            align-items: center;
+            .container {
+                margin-left: 0;
+            }
+            .container-fluid {
+                position: absolute;
+                max-height: 100%;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &-text {
+                padding: 0 50px;
+            }
+        }
+
+        &_newsletter {
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            &-form {
+                margin-top: 0;
+                margin-left: 30px;
+                flex-grow: 2;
+            }
+        }
+    }
+}
+
+@media (min-width: 991.98px) {
+    .about {
+        &_header {
+            padding: 200px 50px;
+            color: $text;
+            margin: 20px 30px 0;
+
+            &-title {
+                @include headerTitle($text, 80px);
+                &::after {
+                    max-width: 150px;
+                }
+            }
+        }
+        &_founder {
+            &-text {
+                &_wrapper {
+                    justify-content: space-between;
+                    .column {
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"J O I N"})
+
+
+<body>
+    @@include('components/_nav.html')
+    <main class="join wow fadeInUp">
+        <div class="container">
+            <form id="join_form" method="" name="joinForm" action="#" class="d-flex flex-wrap join_form form_type_8">
+                <div class="field">
+                    <label for="new_name">First name</label>
+                    <input id="new_name" type="text" name="firstname" required>
+                </div>
+                <div class="field">
+                    <label for="new_lastname">Last name</label>
+                    <input id="new_lastname" type="text" name="lastname">
+                </div>
+                <div class="field">
+                    <label for="new_city">City</label>
+                    <input id="new_city" type="text" name="city">
+                </div>
+                <div class="field">
+                    <label for="new_country">Country</label>
+                    <input id="new_country" type="text" name="country">
+                </div>
+                <div class="field">
+                    <label for="new_address">Address</label>
+                    <input id="new_address" type="text" name="address">
+                </div>
+                <div class="field">
+                    <label for="new_address">ZIP</label>
+                    <input id="new_zip" type="text" name="zip">
+                </div>
+                <div class="field">
+                    <label for="new_email">Email</label>
+                    <input id="new_email" type="email" name="email">
+                </div>
+                <div class="field">
+                    <label for="new_password">Password</label>
+                    <input id="new_password" type="password" name="password">
+                </div>
+                <div class="checkbox-group">
+                    <div class="checkbox">
+                        <input id="subnews" type="checkbox" name="newsletter">
+                        <label for="subnews">Subscribe to our newsletter</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="terms" type="checkbox" name="agree" checked>
+                        <label for="terms" class="flex-wrap">I agree to the
+                            <a href="javascript:void(0)" target="_blank">terms</a>
+                            and would like to continue
+                        </label>
+                    </div>
+                </div>
+                <div class="join_form-action d-flex">
+                    <a class="join_form-action_return d-flex" href="javascript:window.history.go(-1);">
+                        <i class="icon-angle-left"></i>
+                        Return
+                    </a>
+                    <button class="join_form-action_submit" type="submit">Join now</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+
+</html>

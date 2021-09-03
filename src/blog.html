@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"B L O G"})
+
+<body>
+    @@include('components/_nav.html')
+    <header class="blog_header header">
+        <div class="container">
+            <h1 class="blog_header-title">Dropshipping.</h1>
+            <p class="blog_header-subtitle">How I’ve made $10k+ / mo with dropshipping.</p>
+            <a class="blog_header-btn" href="javascript:void(0)">Read more</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="blog_filter">
+                <p class="blog_filter-pointer">
+                    Filter by category
+                    <i class="icon-angle-down"></i>
+                </p>
+                <div class="blog_filter-wrapper flex-wrap">
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter="all">All</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".lifestyle">Lifestyle</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".fashion">Fashion</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".news">News</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".business">How to sell online</button>
+                </div>
+            </div>
+            <ul class="blog_posts d-flex flex-wrap"></ul>
+            <section class="blog_instagram">
+                <h2 class="blog_instagram-title">Instagram</h2>
+                <div class="blog_instagram-profile d-flex">
+                    <span class="blog_instagram-profile_brand">Store</span>
+                    <a class="blog_instagram-profile_link" href="javascript:void(0)"
+                        target="_blank">@minstoreproject</a>
+                </div>
+                <ul class="blog_instagram-feed">
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_1-500.webp 768w, 
+                                  img/instagram/insta_1-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_1-300.jpg"
+                                    data-srcset="img/instagram/insta_1-500.jpg 768w, 
+                                  img/instagram/insta_1-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_2-500.webp 768w, 
+                                img/instagram/insta_2-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_2-300.jpg"
+                                    data-srcset="img/instagram/insta_2-500.jpg 768w, 
+                                img/instagram/insta_2-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_3-500.webp 768w, 
+                                img/instagram/insta_3-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_3-300.jpg"
+                                    data-srcset="img/instagram/insta_3-500.jpg 768w, 
+                                img/instagram/insta_3-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_4-500.webp 768w, 
+                                img/instagram/insta_4-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_4-300.jpg"
+                                    data-srcset="img/instagram/insta_4-500.jpg 768w, 
+                                img/instagram/insta_4-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_5-500.webp 768w, 
+                                img/instagram/insta_5-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_5-300.jpg"
+                                    data-srcset="img/instagram/insta_5-500.jpg 768w, 
+                                img/instagram/insta_5-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_6-500.webp 768w, 
+                                img/instagram/insta_6-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_6-300.jpg"
+                                    data-srcset="img/instagram/insta_6-500.jpg 768w, 
+                                img/instagram/insta_6-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+
+</html>

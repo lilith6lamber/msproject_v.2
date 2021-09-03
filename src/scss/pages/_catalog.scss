@@ -1,0 +1,263 @@
+.catalog {
+    &_header {
+        @include main_bg;
+        margin: 15px 15px 0;
+        font-family: $ms;
+        &-offer {
+            text-align: center;
+            padding: 30px 15px;
+            flex-grow: 1;
+            &_title {
+                text-transform: uppercase;
+                font-weight: 400;
+                font-family: $prt;
+            }
+            &_subtitle {
+                margin: 15px 0;
+                font-weight: 500;
+                color: $postinfo;
+            }
+            &_btn {
+                @include btnSolid($text);
+            }
+        }
+        &-categories {
+            &_item {
+                border-top: 1px solid $gray;
+                padding: 15px;
+                align-items: center;
+                max-height: 300px;
+                flex-grow: 2;
+                .picture {
+                    width: 40%;
+                    img {
+                        @include imgFit;
+                    }
+                }
+                .text {
+                    flex-grow: 1;
+                    .title {
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                        display: flex;
+                        align-items: center;
+                        i {
+                            margin-left: 5px;
+                            opacity: 0;
+                            transition: $animated;
+                        }
+                        &:hover i {
+                            opacity: 1;
+                            margin-left: 10px;
+                        }
+                    }
+                    .subtitle {
+                        color: $postinfo;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    &-wrapper {
+        padding: 0 15px;
+        margin-top: 30px;
+    }
+
+    &_main {
+        padding: 30px 0;
+        margin: 0;
+        flex-grow: 1;
+        &-sort {
+            @include flexCenter;
+            padding: 15px 0;
+            span {
+                text-transform: uppercase;
+                font-size: 14px;
+                @include ms_bold;
+                margin-right: 30px;
+            }
+            &_trigger {
+                font-family: $ms;
+                font-size: 12px;
+                color: $foonav;
+                margin-right: 15px;
+                &:hover {
+                    color: $text;
+                }
+                &.mixitup-control-active {
+                    text-decoration: underline;
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    &_aside {
+        @include main_bg;
+        width: 100%;
+        order: -1;
+        margin-bottom: 10px;
+        padding: 15px 0;
+        &-header {
+            font-family: $prt;
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 15px;
+            i {
+                margin-right: 10px;
+            }
+        }
+        &-categories,
+        &-colors {
+            margin-bottom: 15px;
+            font-family: $ms;
+            padding-left: 30px;
+            &_title {
+                font-weight: 700;
+                font-size: 14px;
+                i {
+                    margin-left: 5px;
+                }
+            }
+            &_list {
+                margin-top: 15px;
+            }
+        }
+        &-categories {
+            &_list {
+                .list-item {
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: $foonav;
+                    i {
+                        margin-left: 10px;
+                    }
+                    .filter-cat {
+                        display: flex;
+                        align-items: center;
+                        &:hover,
+                        &.mixitup-control-active {
+                            color: $text;
+                        }
+                    }
+                }
+            }
+        }
+        &-colors {
+            &_list {
+                .filter_color {
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    filter: drop-shadow(0 0 2px rgb(119, 119, 119));
+                    &.mixitup-control-active {
+                        transform: scale(0.8);
+                    }
+                    &--black {
+                        background: $black;
+                    }
+                    &--white {
+                        background: $white;
+                    }
+                    &--silver {
+                        background: $gray;
+                    }
+                }
+            }
+        }
+        &-btn {
+            @include btnSolid($text);
+            min-width: 100%;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .catalog {
+        &-wrapper {
+            padding: 0 30px;
+        }
+        &_header {
+            margin: 20px 30px 0;
+            &-offer {
+                width: 50%;
+                flex-grow: 0;
+            }
+            &-categories {
+                width: 50%;
+                &_item {
+                    border-top: 1px solid $gray;
+                    border-left: 1px solid $gray;
+                    &:first-of-type {
+                        border-top: none;
+                    }
+                }
+            }
+        }
+        &_main {
+            width: 65%;
+            .products_list-item {
+                width: 50%;
+            }
+        }
+        &_aside {
+            width: calc(35% - 30px);
+            order: 1;
+            margin-left: 15px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 991.98px) {
+    .catalog {
+        &-wrapper {
+            padding: 0 30px;
+        }
+        &_header {
+            margin: 20px 30px 0;
+            &-offer {
+                width: 70%;
+            }
+            &-categories {
+                width: 30%;
+            }
+        }
+        &_main {
+            width: 70%;
+            .products_list-item {
+                width: 33.33333333%;
+            }
+        }
+        &_aside {
+            width: calc(25% - 30px);
+        }
+    }
+}
+
+@media (min-width: 1199.98px) {
+    .catalog {
+        &-wrapper {
+            padding: 0 50px;
+        }
+        &_header {
+            margin: 20px 50px 0;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .catalog {
+        &_main {
+            width: 80%;
+            .products_list-item {
+                width: 25%;
+            }
+        }
+        &_aside {
+            width: calc(20% - 30px);
+        }
+    }
+}

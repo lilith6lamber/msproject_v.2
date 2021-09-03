@@ -1,0 +1,394 @@
+.promo {
+    margin: 0 15px;
+
+    &_container {
+        position: relative;
+        @include main_bg;
+        padding: 30px 0;
+    }
+
+    &_slider {
+        &-slide {
+            &_img img {
+                @include imgFit;
+                height: auto;
+            }
+
+            &_text {
+                text-align: center;
+
+                .name {
+                    font-family: $prt;
+                    font-size: 26px;
+                    min-height: 70px;
+                    margin-top: 15px;
+                }
+
+                .price {
+                    font-family: $pn;
+                    font-size: 18px;
+                    margin: 25px 0;
+                }
+
+                .btn-cart {
+                    @include btnSolid($text);
+                }
+            }
+        }
+
+        &-controls {
+            .slider-control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 36px;
+
+                &:hover {
+                    opacity: .7;
+                }
+                
+                &--prev {
+                    left: 5px;
+                }
+
+                &--next {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.collection {
+    &-subtitle {
+        font-family: $prt;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    &-btn {
+        border: 1px solid $text;
+        border-radius: 50%;
+        display: flex;
+        @include flexCenter;
+        height: 40px;
+        width: 40px;
+        font-size: 22px;
+        margin: 15px auto;
+
+        &:hover {
+            opacity: .4;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
+
+.gallery {
+    margin-top: 15px;
+
+    &_lookbook {
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr) min-content;
+        grid-gap: 10px;
+
+        img {
+            @include imgFit;
+            height: auto;
+        }
+    }
+}
+
+.location {
+    &_title {
+        margin: 30px 0;
+    }
+
+    &_wrapper {
+        position: relative;
+    }
+
+    &_slider {
+        margin-bottom: 35px;
+
+        &-slide {
+            position: relative;
+
+            &_img {
+                img {
+                    @include imgFit;
+                }
+            }
+
+            &_info {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                background: rgba($white, .7);
+                padding: 15px 0;
+
+                .city {
+                    text-transform: uppercase;
+                    font-family: $ms;
+                    font-weight: 800;
+                    font-size: 18px;
+                }
+
+                .address {
+                    font-size: 14px;
+                    font-family: $pn;
+                    margin-bottom: 10px;
+                }
+
+                .hours {
+                    font-size: 12px;
+                    @include ms_semibold;
+                }
+            }
+        }
+
+        &-controls {
+            .slider-control {
+                width: 15px;
+                height: 15px;
+                border-bottom: 1px solid $text;
+                border-left: 1px solid $text;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                z-index: 100;
+
+                &--prev {
+                    left: 10px;
+                    transform: rotate(45deg);
+                }
+
+                &--next {
+                    right: 10px;
+                    transform: rotate(220deg);
+                }
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    &_map {
+        height: 300px;
+    }
+}
+
+@media (min-width: 575.98px) {
+    .promo {
+        &_container {
+            padding: 30px;
+        }
+
+        &_slider {
+            &-slide {
+                &_img {
+                    order: 2;
+                }
+            }
+
+            &-controls {
+                .slider-control {
+                    font-size: 50px;
+
+                    &--prev {
+                        left: 15px;
+                    }
+
+                    &--next {
+                        right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .promo {
+        margin: 20px 30px 0;
+    }
+
+    .gallery {
+        &_lookbook {
+            grid-gap: 15px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .collection {
+        &_list {
+            &-item {
+                &_action {
+                    justify-content: space-around;
+                    margin: 10px 0;
+
+                    a {
+                        width: calc(50% - 20px);
+                        border: 1px solid $text;
+                        padding: 10px 0px;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        flex-grow: 1;
+
+                        &:first-of-type {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .location {
+
+        &_slider {
+            margin-bottom: 35px;
+
+            &-slide {
+                position: relative;
+                align-items: center;
+
+                &_img {
+                    margin-right: 15px;
+
+                    img {
+                        @include imgFit;
+                    }
+                }
+
+                &_info {
+                    position: relative;
+                    transform: none;
+                    background: transparent;
+                    padding: 15px 0;
+                    order: -1;
+                }
+
+                &_img,
+                &_info {
+                    width: calc(50% - 15px);
+                }
+            }
+
+            &-controls {
+                .slider-control {
+                    width: 30px;
+                    height: 30px;
+                    border-bottom: 1px solid $text;
+                    border-left: 1px solid $text;
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    z-index: 100;
+
+                    &--prev {
+                        left: 0;
+                        transform: rotate(45deg);
+                    }
+
+                    &--next {
+                        right: 0;
+                        transform: rotate(220deg);
+                    }
+
+                }
+            }
+        }
+
+        &_map {
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width: 991.98px) {
+    .promo {
+        margin: 20px 30px 0;
+        &_slider-slide_text .name {
+            font-size: 40px;
+        }
+        &_slider-controls .slider-control {
+            font-size: 110px;
+        }
+    }
+
+    .collection-subtitle {
+        font-size: 24px;
+        margin: 15px 0 40px;
+    }
+    .location {
+        &_title {
+            margin: 80px 0;
+        }
+        &_slider {
+            margin-bottom: 70px;
+
+            &-slide {
+                &_info, &_img {
+                    width: calc(50% - 50px);
+                }
+                &_img {
+                    margin-right: 50px;
+                }
+
+                &_info {
+
+                    .city {
+                        font-size: 32px;
+                    }
+
+                    .address {
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
+
+                    .hours {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-controls {
+                .slider-control {
+                    width: 45px;
+                    height: 45px;
+
+                    &--prev {
+                        left: 0;
+                    }
+
+                    &--next {
+                        right: 0;
+                    }
+
+                }
+            }
+        }
+
+        &_map {
+            height: 600px;
+        }
+    }
+}
+
+@media (min-width:1199.98px) {
+    .promo {
+        margin: 20px 50px 0;
+    }
+}

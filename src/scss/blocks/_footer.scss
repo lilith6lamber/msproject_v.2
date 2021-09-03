@@ -1,0 +1,90 @@
+.footer {
+    padding: 120px 0 60px;
+
+    &_brandname {
+        @include ms_bold;
+        text-align: center;
+        font-size: 14px;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+    }
+
+    &_nav {
+        &-group {
+            margin-top: 15px;
+            text-align: center;
+            &_trigger {
+                font-size: 14px;
+                font-family: $prt;
+                margin-bottom: 20px;
+            }
+
+            &_list {
+                display: block;
+                &.hidden {
+                    display: none;
+                }
+                a {
+                    font-size: 12px;
+                    line-height: 40px;
+                    color: $foonav;
+                    @include ms_light;
+
+                    &:hover {
+                        color: $text;
+                    }
+                }
+            }
+        }
+    }
+
+    &_socials {
+        margin: 80px auto 30px;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                color: $foolist;
+
+                i {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    &_copy {
+        text-align: center;
+        font-family: $prt;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:767.98px) {
+    .footer {
+        &_nav {
+            justify-content: space-around;
+            &-group {
+                text-align: left;
+            }
+        }
+    }
+}
+@media (max-width:767.98px) {
+    .footer {
+        &_nav {
+            &-group {
+                width: 100%;
+            }
+
+            &-group {
+                text-align: center;
+            }
+        }
+    }
+}

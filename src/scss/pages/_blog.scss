@@ -1,0 +1,239 @@
+.blog {
+    &_header {
+        background: url('../../img/blogbg.jpg');
+        @include headerBg;
+        padding: 60px 25px;
+        color: $white;
+        box-shadow: $shadow;
+        margin: 15px 15px 0;
+        text-align: center;
+
+        &-title {
+            @include headerTitle($white, 32px);
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &-subtitle {
+            @include ms_semibold;
+            font-size: 14px;
+            margin: 10px 0 30px;
+        }
+
+        &-btn {
+            @include btnSolid($white);
+        }
+    }
+
+    &_filter {
+        &-pointer {
+            @include flexCenter;
+            margin-bottom: 15px;
+            @include ms_bold;
+            i {
+                margin-left: 10px;
+            }
+        }
+        &-wrapper {
+            @include flexCenter;
+            &_trigger {
+                text-transform: uppercase;
+                padding: 5px;
+                margin: 5px;
+                border: 1px solid $text;
+                border-radius: 3px;
+                @include ms_semibold;
+                font-size: 12px;
+                &:hover {
+                    background: $text;
+                    color: $white;
+                }
+                &.mixitup-control-active {
+                    border-color: $red;
+                    color: $white;
+                    background: $red;
+                }
+            }
+        }
+    }
+    &_posts {
+        margin: 15px 0 30px;
+        &-post {
+            display: flex;
+            flex-direction: column;
+            transition: $animated;
+            padding: 15px 10px;
+            &:hover {
+                box-shadow: $shadow;
+            }
+            &_img {
+                position: relative;
+                img {
+                    @include imgFit;
+                }
+            }
+            &_text {
+                flex-grow: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .title {
+                    font-family: $prt;
+                    font-weight: 400;
+                    margin: 10px 0;
+                }
+                .preview {
+                    font-family: $ms;
+                    font-size: 12px;
+                    text-align: justify;
+                    word-break: break-all;
+                    margin-bottom: 10px;
+                }
+                .read {
+                    width: fit-content;
+                    margin-left: auto;
+                    font-size: 11px;
+                    position: relative;
+                    padding-left: 50px;
+                    @include ms_bold;
+                    &:before {
+                        content: '';
+                        width: 40px;
+                        height: 2px;
+                        background-color: #262626;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transition: $animated;
+                    }
+                    &:hover:before {
+                        left: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &_instagram {
+        margin-top: 20px;
+
+        &-title {
+            font-family: $ig;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &-profile {
+            margin: 10px 0;
+            align-items: center;
+
+            &_brand {
+                text-transform: uppercase;
+                @include ms_bold;
+                font-size: 12px;
+                @include flexCenter;
+                width: 45px;
+                height: 45px;
+                border: 1px solid $text;
+                border-radius: 50%;
+                padding: 5px;
+                margin-right: 15px;
+            }
+
+            &_link {
+                @include ms_semibold;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+
+        &-feed {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+
+            &_item {
+                position: relative;
+                cursor: pointer;
+
+                &:hover .overlay {
+                    opacity: 1;
+                }
+
+                .overlay {
+                    content: '';
+                    position: absolute;
+                    transition: $animated;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include flexCenter;
+                    text-align: center;
+                    background: rgba($black, .7);
+                    opacity: 0;
+
+                    .share,
+                    .like {
+                        background: $white;
+                        @include flexCenter;
+                        border-radius: 50%;
+                        padding: 5px;
+                    }
+
+                    .share {
+                        margin-right: 5px;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+
+                    .like:hover {
+                        color: $red;
+                    }
+                }
+
+                img {
+                    @include imgFit;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .blog {
+        &_header {
+            padding: 80px 50px;
+            margin: 20px 30px 0;
+
+            &-title {
+                @include headerTitle($white, 64px);
+            }
+
+            &-subtitle {
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (min-width: 1199.98px) {
+    .blog {
+        &_header {
+            margin: 20px 50px 0;
+            text-align: left;
+            &-title {
+                @include headerTitle($white, 80px);
+            }
+            &-btn {
+                text-align: center;
+            }
+        }
+    }
+}

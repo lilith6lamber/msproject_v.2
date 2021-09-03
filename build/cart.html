@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C A R T</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container-fluid navbar_container d-flex align-items-center justify-content-between">
+        <div class="navbar_brand d-flex align-items-center">
+            <button class="hamburger hamburger--minus" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a class="navbar_brand-link" href="index.html">Store</a>
+        </div>
+        <div class="navbar_user d-flex align-items-center">
+            <form class="navbar_user-search d-flex" action="">
+                <input class="navbar_user-search_input" type="text" name="searchQuery" id="searchQuery" placeholder="Search...">
+                <button class="navbar_user-search_btn" type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+            <div class="navbar_user-account d-flex align-items-center">
+                <a id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+            </div>
+            <div class="navbar_user-cart">
+                <a href="cart.html">
+                    <i class="icon-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navbar_container">
+        <ul class="navbar_submenu" id="navbar_submenu">
+            <li class="navbar_submenu-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="blog.html">Blog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <main class="cart">
+        <div class="container cart_container">
+            <section class="cart_products section">
+                <h3 class="cart_products-title section-title">Shopping cart</h3>
+                <table class="cart_products-table">
+                    <thead>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="cart_products-table_product">
+                            <td class="table-product">
+                                <a href="product.html" class="product-link" target="_blank">
+                                    <picture>
+                                        <source type="image/webp" srcset="img/products/1.webp">
+                                        <source type="image/jpeg" srcset="img/products/1.jpg">
+                                        <img src="img/products/1.jpg" alt="product">
+                                    </picture>
+                                    <span>
+                                        Voyageur Brooklyn Backpack
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="table-price">$395</td>
+                            <td class="table-qty">
+                                <div class="qty_wrapper d-flex flex-wrap align-items-center">
+                                    <span class="qty-counter">1</span>
+                                    <div class="qty-controls">
+                                        <a class="qty-plus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-up"></i>
+                                        </a>
+                                        <a class="qty-minus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-total">$395</td>
+                            <td class="table-delete">
+                                <a class="table-delete_btn" href="avascript:void(0)">
+                                    <i class="icon-close"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="cart_products-table_product">
+                            <td class="table-product">
+                                <a href="product.html" class="product-link" target="_blank">
+                                    <picture>
+                                        <source type="image/webp" srcset="img/products/4.webp">
+                                        <source type="image/jpeg" srcset="img/products/4.jpg">
+                                        <img src="img/products/4.jpg" alt="product">
+                                    </picture>
+                                    <span>
+                                        Balck Nuba hat
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="table-price">$67.57</td>
+                            <td class="table-qty">
+                                <div class="qty_wrapper d-flex flex-wrap align-items-center">
+                                    <span class="qty-counter">1</span>
+                                    <div class="qty-controls">
+                                        <a class="qty-plus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-up"></i>
+                                        </a>
+                                        <a class="qty-minus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-total">$67.57</td>
+                            <td class="table-delete">
+                                <a class="table-delete_btn" href="avascript:void(0)">
+                                    <i class="icon-close"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="cart_products-table_product">
+                            <td class="table-product">
+                                <a href="product.html" class="product-link" target="_blank">
+                                    <picture>
+                                        <source type="image/webp" srcset="img/products/8.webp">
+                                        <source type="image/jpeg" srcset="img/products/8.jpg">
+                                        <img src="img/products/8.jpg" alt="product">
+                                    </picture>
+                                    <span>
+                                        Minimalist Mug
+                                    </span>
+                                </a>
+                            </td>
+                            <td class="table-price">$10</td>
+                            <td class="table-qty">
+                                <div class="qty_wrapper d-flex flex-wrap align-items-center">
+                                    <span class="qty-counter">2</span>
+                                    <div class="qty-controls">
+                                        <a class="qty-plus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-up"></i>
+                                        </a>
+                                        <a class="qty-minus qty-el" href="javascript:void(0)">
+                                            <i class="icon-angle-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-total">$20</td>
+                            <td class="table-delete">
+                                <a class="table-delete_btn" href="avascript:void(0)">
+                                    <i class="icon-close"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="cart_coupon section">
+                <h3 class="cart_coupon-title section-title">Coupon code</h3>
+                <form action="" class="cart_coupon-form d-flex flex-wrap">
+                    <input class="cart_coupon-form_input" type="text" name="" id=""
+                        placeholder="Enter you coupon code here">
+                    <button class="cart_coupon-form_btn" type="submit">Apply coupon</button>
+                </form>
+                <div class="wrapper">
+                    <a class="cart_coupon-btn" href="javascript:void(0)">Continue shopping</a>
+                    <a class="cart_coupon-btn" href="javascript:void(0)">Update cart</a>
+                </div>
+            </section>
+            <section class="cart_total section">
+                <h3 class="cart_total-title section-title">Grand Total</h3>
+                <div class="total-wrapper">
+                    <ul class="cart_total-list">
+                        <li class="cart_total-list_item d-flex justify-content-between">
+                            <span class="property">Subtotal</span>
+                            <span class="value">$450</span>
+                        </li>
+                        <li class="cart_total-list_item d-flex justify-content-between">
+                            <span class="property">Shipping</span>
+                            <span class="value">$50</span>
+                        </li>
+                        <li class="cart_total-list_item cart_total-list_item--total d-flex justify-content-between">
+                            <span class="property">Total cost</span>
+                            <span class="value">$500</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="checkout.html" class="cart_total-btn">Proceed to checkout</a>
+            </section>
+        </div>
+    </main>
+    <footer class="footer" id="bottom">
+    <div class="container">
+        <h2 class="footer_brandname">Store</h2>
+        <nav class="footer_nav d-flex flex-wrap">
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">My Account</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">How to buy</a></li>
+                    <li><a href="javascript:void(0)">General Information</a></li>
+                    <li><a href="javascript:void(0)">Payment</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Returns</a></li>
+                    <li><a href="javascript:void(0)">Exchanges</a></li>
+                    <li><a href="javascript:void(0)">Gift Card</a></li>
+                    <li><a href="javascript:void(0)">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Company</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">About us</a></li>
+                    <li><a href="javascript:void(0)">Offices</a></li>
+                    <li><a href="javascript:void(0)">Stores</a></li>
+                    <li><a href="javascript:void(0)">Work with us</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Policies</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Gift Card Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="footer_socials d-flex justify-content-center">
+            <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a></li>
+        </ul>
+        <p class="footer_copy">Copyright &copy; 2018 | Hogash.com</p>
+    </div>
+</footer>
+<a href="javascript:void(0)" class="scroll_top"></a>
+<a href="#bottom" class="scroll_bottom"></a>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

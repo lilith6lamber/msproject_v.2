@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"C O N T A C T"})
+
+<body>
+    @@include('components/_nav.html')
+    <header class="header_contact header">
+        <div class="container d-flex flex-wrap align-items-center">
+            <h1 class="header_contact-title col-12 col-xl-7">Contact us</h1>
+            <p class="header_contact-subtitle col-12 col-xl-5">Looking Forward to Hearing From You.</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="contact_wrapper d-flex flex-wrap align-items-center">
+                <form class="col-12 col-lg-8 contact_form" method="POST" action="">
+                    <div class="fields_wrapper d-flex flex-wrap">
+                        <div class="contact_form-field col-12">
+                            <label class="contact_form-field_label" for="customer-name">Your name</label>
+                            <input class="contact_form-field_input" id="customer-name" type="text">
+                        </div>
+                        <div class="contact_form-field col-12">
+                            <label class="contact_form-field_label" for="customer-mail">Your email</label>
+                            <input class="contact_form-field_input" id="customer-mail" type="email" name="_replyto">
+                        </div>
+                    </div>
+                    <div class="contact_form-field col-12">
+                        <label class="contact_form-field_label" for="subject">Subject</label>
+                        <input class="contact_form-field_input" id="subject" type="text">
+                    </div>
+                    <div class="contact_form-field col-12">
+                        <label class="contact_form-field_label" for="message">Message</label>
+                        <textarea class="contact_form-field_input" id="message" name="message" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <button class="btn contact_form-btn" type="submit">Submit</button>
+                </form>
+                <div class="contact_info col-12 col-lg-4">
+                    <h4 class="contact_info-brand">Store</h4>
+                    <ul class="contact_info-list">
+                        <li>
+                            <p><i class="icon-map-marker"></i>1857 Alford Rapid Apt. 109</p>
+                        </li>
+                        <li class="d-flex">
+                            <i class="icon-phone"></i>
+                            <div class="wrapper">
+                                <a href="tel:+847245724">+(84) 7245 724</a>
+                                <a href="tel:+846585554">+(84) 6585 554</a>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="icon-mail"></i>
+                            <a class="contact_info-list_mail"
+                                href="mailto:zetta_considine@tomasa.ca">zetta_considine@tomasa.ca</a>
+                        </li>
+                    </ul>
+                    <h4 class="contact_info-socials_title">Social networks</h4>
+                    <ul class="contact_info-socials_list d-flex">
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_blank">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <i class="icon-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://google.com" target="_blank">
+                                <i class="icon-google"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+
+</html>

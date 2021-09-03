@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P R O D U C T</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container-fluid navbar_container d-flex align-items-center justify-content-between">
+        <div class="navbar_brand d-flex align-items-center">
+            <button class="hamburger hamburger--minus" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a class="navbar_brand-link" href="index.html">Store</a>
+        </div>
+        <div class="navbar_user d-flex align-items-center">
+            <form class="navbar_user-search d-flex" action="">
+                <input class="navbar_user-search_input" type="text" name="searchQuery" id="searchQuery" placeholder="Search...">
+                <button class="navbar_user-search_btn" type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+            <div class="navbar_user-account d-flex align-items-center">
+                <a id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+            </div>
+            <div class="navbar_user-cart">
+                <a href="cart.html">
+                    <i class="icon-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navbar_container">
+        <ul class="navbar_submenu" id="navbar_submenu">
+            <li class="navbar_submenu-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="blog.html">Blog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <header class="single">
+        <div class="single-wrapper d-flex flex-wrap">
+            <div class="container d-flex flex-wrap justify-content-center slider-wrapper">
+                <ul class="single_slider">
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single01.webp">
+                            <source type="image/jpeg" srcset="img/products/single01.jpg">
+                            <img src="img/products/single01.jpg" alt="product">
+                        </picture>
+                    </li>
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single02.webp">
+                            <source type="image/jpeg" srcset="img/products/single02.jpg">
+                            <img src="img/products/single02.jpg" alt="product">
+                        </picture>
+                    </li>
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single03.webp">
+                            <source type="image/jpeg" srcset="img/products/single03.jpg">
+                            <img src="img/products/single03.jpg" alt="product">
+                        </picture>
+                    </li>
+                </ul>
+                <div class="single_slider-controls">
+                    <a class="slider-control slider-control--prev" href="javascript:void(0)">
+                        <i class="icon-angle-left"></i>
+                    </a>
+                    <a class="slider-control slider-control--next" href="javascript:void(0)">
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </div>
+                <ul class="single_slider-thumbnails d-flex align-items-center">
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single01-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single01-thumbnail.jpg">
+                            <img src="img/products/single01-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single02-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single02-thumbnail.jpg">
+                            <img src="img/products/single02-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single03-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single03-thumbnail.jpg">
+                            <img src="img/products/single03-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+            <div class="single_info">
+                <h2 class="single_info-itemname">Les Nouveaux Tops</h2>
+                <p class="single_info-description">
+                    Comfy yet stylish, the Luca Longline Cardigan from Atmos&Here is a
+                    trans-seasonal staple.
+                </p>
+                <div class="single_info-options">
+                    <div class="options-wrapper d-flex">
+                        <div class="single_info-options_size options">
+                            <span class="name">Size</span>
+                            <select class="select" id="size" name="size">
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                            </select>
+                        </div>
+                        <div class="single_info-options_color options">
+                            <span class="name">Color</span>
+                            <select class="select" id="color" name="color">
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                                <option value="white">White</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="options-wrapper d-flex">
+                        <div class="single_info-options_qty options">
+                            <span class="name">Qty</span>
+                            <div class="qty_wrapper d-flex justify-content-center">
+                                <a class="qty-minus qty-el" href="javascript:void(0)">-</a>
+                                <span class="qty-counter qty-el">1</span>
+                                <a class="qty-plus qty-el" href="javascript:void(0)">+</a>
+                            </div>
+                        </div>
+                        <div class="single_info-options_rate options">
+                            <div class="stars">
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star"></i>
+                            </div>
+                            <a href="javascript:void(0)">3 ratings</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="single_price">$49</span>
+                <div class="single_action d-flex flex-wrap">
+                    <a class="single_action-btn single_action-btn--cart" href="javascript:void(0)">Add to cart</a>
+                    <a class="single_action-btn single_action-btn--favorites" href="javascript:void(0)">Add to favorites</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="single_tabs">
+        <div class="single_tabs-wrapper">
+            <div class="single_tabs-group d-flex flex-wrap">
+                <button class="tab-button active" data-id="description">Description</button>
+                <button class="tab-button" data-id="additional">Additional information</button>
+                <button class="tab-button" data-id="reviews">Reviews</button>
+            </div>
+            <div class="single_tabs-content">
+                <div class="content active" id="description">
+                    <p>Distinctively create client-centered networks whereas technically sound customer service.
+                        Holisticly
+                        synergize enabled supply chains through timely innovation. Seamlessly disseminate flexible
+                        vortals
+                        without high-payoff innovation.</p>
+                    <p>Continually harness reliable products after cross-platform scenarios. Authoritatively
+                        disintermediate
+                        economically sound e-business via granular e-commerce. Rapidiously embrace innovative results
+                        without
+                        process-centric interfaces.</p>
+                    <p>Globally architect economically sound bandwidth with installed base
+                        materials. Uniquely supply wireless niches through economically sound innovation.</p>
+                </div>
+                <div class="content" id="additional">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi aperiam omnis, nihil, nam
+                        dolorem
+                        excepturi iste consequatur veniam assumenda aut. Pariatur accusantium rerum culpa laudantium
+                        architecto
+                        quisquam, iusto maiores.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis sapiente, deleniti perspiciatis
+                        impedit
+                        nesciunt beatae praesentium quod aliquam accusamus quasi atque. Obcaecati nemo tenetur
+                        necessitatibus
+                        dolorem qui quas aliquam quibusdam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi aperiam omnis, nihil, nam
+                        dolorem
+                        excepturi iste consequatur veniam assumenda aut. Pariatur accusantium rerum culpa laudantium
+                        architecto
+                        quisquam, iusto maiores.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis sapiente, deleniti perspiciatis
+                        impedit
+                        nesciunt beatae praesentium quod aliquam accusamus quasi atque. Obcaecati nemo tenetur
+                        necessitatibus
+                        dolorem qui quas aliquam quibusdam.</p>
+                </div>
+                <div class="content" id="reviews">
+                    <ul id="reviews-list">
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review1.webp">
+                                    <source type="image/jpeg" srcset="img/review1.jpg">
+                                    <img src="img/review1.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Mary J.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review2.webp">
+                                    <source type="image/jpeg" srcset="img/review2.jpg">
+                                    <img src="img/review2.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Garry D.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review3.webp">
+                                    <source type="image/jpeg" srcset="img/review3.jpg">
+                                    <img src="img/review3.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Hannah G.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review4.webp">
+                                    <source type="image/jpeg" srcset="img/review4.jpg">
+                                    <img src="img/review4.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Mike B.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="warning">You have to <a id="open-login-modal" href="javascript:void(0)">log in</a> to
+                        leave a
+                        review.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="single_related">
+        <div class="container">
+            <h3 class="single_related-title">Related Products</h3>
+            <ul class="single_related-list d-flex flex-wrap">
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <footer class="footer" id="bottom">
+    <div class="container">
+        <h2 class="footer_brandname">Store</h2>
+        <nav class="footer_nav d-flex flex-wrap">
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">My Account</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">How to buy</a></li>
+                    <li><a href="javascript:void(0)">General Information</a></li>
+                    <li><a href="javascript:void(0)">Payment</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Returns</a></li>
+                    <li><a href="javascript:void(0)">Exchanges</a></li>
+                    <li><a href="javascript:void(0)">Gift Card</a></li>
+                    <li><a href="javascript:void(0)">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Company</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">About us</a></li>
+                    <li><a href="javascript:void(0)">Offices</a></li>
+                    <li><a href="javascript:void(0)">Stores</a></li>
+                    <li><a href="javascript:void(0)">Work with us</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Policies</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Gift Card Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="footer_socials d-flex justify-content-center">
+            <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a></li>
+        </ul>
+        <p class="footer_copy">Copyright &copy; 2018 | Hogash.com</p>
+    </div>
+</footer>
+<a href="javascript:void(0)" class="scroll_top"></a>
+<a href="#bottom" class="scroll_bottom"></a>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+    <script>
+        drawTabs();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B L O G</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container-fluid navbar_container d-flex align-items-center justify-content-between">
+        <div class="navbar_brand d-flex align-items-center">
+            <button class="hamburger hamburger--minus" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a class="navbar_brand-link" href="index.html">Store</a>
+        </div>
+        <div class="navbar_user d-flex align-items-center">
+            <form class="navbar_user-search d-flex" action="">
+                <input class="navbar_user-search_input" type="text" name="searchQuery" id="searchQuery" placeholder="Search...">
+                <button class="navbar_user-search_btn" type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+            <div class="navbar_user-account d-flex align-items-center">
+                <a id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+            </div>
+            <div class="navbar_user-cart">
+                <a href="cart.html">
+                    <i class="icon-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navbar_container">
+        <ul class="navbar_submenu" id="navbar_submenu">
+            <li class="navbar_submenu-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="blog.html">Blog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <header class="post_header"></header>
+    <main class="post_main">
+        <div class="post_info d-flex flex-wrap">
+            <h1 class="post_info-title"></h1>
+            <div class="post_info-general d-flex flex-wrap align-items-center">
+                <span class="d-flex">
+                    by
+                    <a id="author" href="javascript:void(0)"></a>
+                </span>
+                <span id="date"></span>
+                <div class="wrapper">
+                    <span id="time">
+                        <i class="icon-clock"></i>
+                        3 min
+                    </span>
+                    <span class="views">
+                        <i class="icon-eye"></i>
+                        <span id="views"></span>
+                    </span>
+                    <a id="comments" href="#comments_section">
+                        <i class="icon-comments"></i>
+                        3
+                    </a>
+                </div>
+            </div>
+            <div class="post_share d-flex">
+                <span>Share on:</span>
+                <ul class="post_share-links d-flex">
+                    <li class="post_share-links_link">
+                        <a href="javascript:void(0)" target="_blank" title="Email">
+                            <i class="icon-mail"></i>
+                        </a>
+                    </li>
+                    <li class="post_share-links_link">
+                        <a href="javascript:void(0)" target="_blank" title="Pinterest">
+                            <i class="icon-pinterest"></i>
+                        </a>
+                    </li>
+                    <li class="post_share-links_link">
+                        <a href="javascript:void(0)" target="_blank" title="Facebook">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="post_share-links_link">
+                        <a href="javascript:void(0)" target="_blank" title="Twitter">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="post_share-links_link">
+                        <a href="javascript:void(0)" target="_blank" title="LinkedIn">
+                            <i class="icon-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <article class="post_content">
+            <h2 class="post_content-title">Consequatur, minus sapiente.</h2>
+            <p class="post_content-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sapiente eos perspiciatis accusamus
+                autem
+                error
+                nam vero accusantium blanditiis, repudiandae, vitae dicta at cum corporis deleniti similique expedita
+                repellat
+                omnis!
+            </p>
+            <p class="post_content-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate aperiam error!
+                Commodi
+                architecto eaque harum expedita aperiam velit, nesciunt distinctio officiis perspiciatis quod optio
+                nostrum
+                sapiente excepturi doloribus!
+            </p>
+            <p class="post_content-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro dolore optio a, similique, sapiente
+                provident eos asperiores reprehenderit et amet sed sunt. Voluptatum commodi nulla fuga ipsa consequuntur
+                non?
+            </p>
+            <h2 class="post_content-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <p class="post_content-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sapiente eos perspiciatis accusamus
+                autem
+                error
+                nam vero accusantium blanditiis, repudiandae, vitae dicta at cum corporis deleniti similique expedita
+                repellat
+                omnis!
+            </p>
+            <p class="post_content-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nihil cupiditate aperiam error!
+                Commodi
+                architecto eaque harum expedita aperiam velit, nesciunt distinctio officiis perspiciatis quod optio
+                nostrum
+                sapiente excepturi doloribus!
+            </p>
+        </article>
+    </main>
+    <aside id="comments_section" class="comments">
+        <div class="container comments_container">
+            <div class="comments_header d-flex justify-content-between align-items-center">
+                <h3 class="comments_header-title">Leave a reply</h3>
+                <span class="comments_header-counter">( 3 comments )</span>
+            </div>
+            <div class="comments_content">
+                <div class="comments_content-comment d-flex">
+                    <picture>
+                        <source type="image/webp" srcset="img/avatar1.webp">
+                        <source type="image/jpeg" srcset="img/avatar1.jpg">
+                        <img src="img/avatar1.jpg" alt="avatar" class="comments_content-comment_avatar">
+                    </picture>
+                    <div class="comments_content-comment_text">
+                        <span class="comment-date">April 9, 2016</span>
+                        <span class="comment-author">Jennifer Stone</span>
+                        <p class="comment-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard
+                            dummy text.</p>
+                        <div class="comment-activity d-flex">
+                            <span class="activity-likes d-flex align-items-center">
+                                <i class="icon-heart-filled"></i>
+                                3
+                            </span>
+                            <span class="activity-replies d-flex align-items-center">
+                                <i class="icon-reply"></i>
+                                1
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments_content-comment d-flex is-reply">
+                    <picture>
+                        <source type="image/webp" srcset="img/avatar2.webp">
+                        <source type="image/jpeg" srcset="img/avatar2.jpg">
+                        <img src="img/avatar2.jpg" alt="avatar" class="comments_content-comment_avatar">
+                    </picture>
+                    <div class="comments_content-comment_text">
+                        <span class="comment-date">April 9, 2016</span>
+                        <span class="comment-author">Andrew Mayers</span>
+                        <p class="comment-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard
+                            dummy text.</p>
+                        <div class="comment-activity d-flex">
+                            <span class="activity-likes d-flex align-items-center">
+                                <i class="icon-heart-filled"></i>
+                                1
+                            </span>
+                            <span class="activity-replies d-flex align-items-center">
+                                <i class="icon-reply"></i>
+                                0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments_content-comment d-flex">
+                    <picture>
+                        <source type="image/webp" srcset="img/avatar3.webp">
+                        <source type="image/jpeg" srcset="img/avatar3.jpg">
+                        <img src="img/avatar3.jpg" alt="avatar" class="comments_content-comment_avatar">
+                    </picture>
+                    <div class="comments_content-comment_text">
+                        <span class="comment-date">April 9, 2016</span>
+                        <span class="comment-author">Diane Kruger</span>
+                        <p class="comment-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard
+                            dummy text.</p>
+                        <div class="comment-activity d-flex">
+                            <span class="activity-likes d-flex align-items-center">
+                                <i class="icon-heart-filled"></i>
+                                1
+                            </span>
+                            <span class="activity-replies d-flex align-items-center">
+                                <i class="icon-reply"></i>
+                                0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments_new">
+                <h4 class="comments_new-title">Add your review</h4>
+                <form action="" class="comments_new-form">
+                    <div class="field">
+                        <label class="comments_new-form_label" for="commentName">Your name</label>
+                        <input class="comments_new-form_input" type="text" name="commentName" id="commentName">
+                    </div>
+                    <div class="field">
+                        <label class="comments_new-form_label" for="commentEmail">Your mail</label>
+                        <input class="comments_new-form_input" type="email" name="commentEmail" id="commentEmail">
+                    </div>
+                    <div class="field">
+                        <label class="comments_new-form_label" for="commentMessage">Your review</label>
+                        <textarea class="comments_new-form_input" name="commentMessage" id="commentMessage" cols="30" rows="10"></textarea>
+                    </div>
+                    <button class="comments_new-form_btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+    <footer class="footer" id="bottom">
+    <div class="container">
+        <h2 class="footer_brandname">Store</h2>
+        <nav class="footer_nav d-flex flex-wrap">
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">My Account</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">How to buy</a></li>
+                    <li><a href="javascript:void(0)">General Information</a></li>
+                    <li><a href="javascript:void(0)">Payment</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Returns</a></li>
+                    <li><a href="javascript:void(0)">Exchanges</a></li>
+                    <li><a href="javascript:void(0)">Gift Card</a></li>
+                    <li><a href="javascript:void(0)">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Company</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">About us</a></li>
+                    <li><a href="javascript:void(0)">Offices</a></li>
+                    <li><a href="javascript:void(0)">Stores</a></li>
+                    <li><a href="javascript:void(0)">Work with us</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Policies</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Gift Card Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="footer_socials d-flex justify-content-center">
+            <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a></li>
+        </ul>
+        <p class="footer_copy">Copyright &copy; 2018 | Hogash.com</p>
+    </div>
+</footer>
+<a href="javascript:void(0)" class="scroll_top"></a>
+<a href="#bottom" class="scroll_bottom"></a>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+    <script>
+        drawSingle();
+
+        function load() {
+                let DATA = JSON.parse(localStorage.getItem('data'));
+                document.title = DATA.title;
+            }
+            window.onload = load;
+    </script>
+</body>
+
+</html>

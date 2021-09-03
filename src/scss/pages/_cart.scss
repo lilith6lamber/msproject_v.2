@@ -1,0 +1,247 @@
+.total-wrapper {
+    border: 2px solid $text;
+    padding: 10px;
+    font-family: $ms;
+}
+
+.cart {
+    .section {
+        font-family: $ms;
+        margin: 15px 0 25px;
+        &-title {
+            font-family: $prt;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+    &_products {
+        &-table {
+            width: 100%;
+            font-size: 11px;
+            text-align: center;
+            font-weight: 700;
+            border-collapse: collapse;
+            .table {
+                &-product {
+                    max-width: 60px;
+                    img {
+                        @include imgFit;
+                    }
+                }
+                &-delete_btn:hover {
+                    color: $red;
+                }
+                &-qty {
+                    .qty_wrapper {
+                        border: 1px solid $gray;
+                        justify-content: space-around;
+                        max-width: 60px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            th,
+            tr.cart_products-table_product td {
+                border-bottom: 1px solid $gray;
+            }
+            th,
+            td {
+                padding: 10px 0;
+            }
+        }
+    }
+    &_coupon {
+        &-form {
+            background: $gray;
+            padding: 10px;
+            margin-bottom: 15px;
+            &_input {
+                background: $white;
+                margin-bottom: 10px;
+                border: 1px solid transparent;
+                transition: $animated;
+                font-family: $ms;
+                &:focus {
+                    border-color: $text;
+                }
+                &::placeholder {
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+            }
+            &_btn {
+                @include btnSolid($text);
+            }
+            &_input,
+            &_btn {
+                min-width: 100%;
+                padding: 10px;
+                letter-spacing: 1px;
+            }
+        }
+        &-btn {
+            background: $gray;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+    &_total {
+        &-list {
+            font-weight: 700;
+            &_item {
+                margin-bottom: 10px;
+                font-size: 12px;
+                line-height: 24px;
+                &:not(:last-of-type) {
+                    border-bottom: 2px solid $gray;
+                }
+                &--total {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                }
+            }
+        }
+        &-btn {
+            @include btnSolid($text);
+            padding: 10px;
+            min-width: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .cart {
+        &_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1210px;
+        }
+        &_products {
+            &-table {
+                font-size: 12px;
+                .table {
+                    &-product {
+                        .product-link {
+                            display: flex;
+                            align-items: center;
+                            span {
+                                min-width: 75%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &_products {
+            width: 100%;
+        }
+        &_coupon {
+            width: calc(60% - 30px);
+            .wrapper {
+                display: flex;
+                align-items: center;
+            }
+            &-btn {
+                &:first-of-type {
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                }
+            }
+        }
+        &_total {
+            width: calc(40% - 30px);
+        }
+    }
+}
+
+@media (min-width: 991.98px) {
+    .total-wrapper {
+        padding: 30px;
+    }
+    .cart {
+        .section {
+            margin: 100px 0 25px;
+            &:first-of-type {
+                margin: 0;
+            }
+            &-title {
+                margin-bottom: 36px;
+                font-size: 26px;
+            }
+        }
+        &_products {
+            &-table {
+                font-size: 16px;
+                .table {
+                    &-product {
+                        .product-link {
+                            span {
+                                min-width: 70%;
+                            }
+                        }
+                    }
+                }
+                td {
+                    padding: 30px 0;
+                }
+                th {
+                    padding: 0 0 30px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &_coupon {
+            &-form {
+                padding: 50px;
+                margin-bottom: 30px;
+                &_input {
+                    flex-grow: 2;
+                    margin-bottom: 0;
+                }
+                &_btn {
+                    width: auto;
+                }
+                &_input,
+                &_btn {
+                    min-width: unset;
+                    padding: 15px 20px;
+                }
+            }
+            &-btn {
+                padding: 20px 40px;
+                &:first-of-type {
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                }
+            }
+        }
+        &_total {
+            &-list {
+                &_item {
+                    font-size: 14px;
+                    line-height: 30px;
+                    &--total {
+                        font-size: 18px;
+                    }
+                }
+            }
+            &-btn {
+                padding: 25px;
+                min-width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+}

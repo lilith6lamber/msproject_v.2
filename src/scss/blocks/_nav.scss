@@ -1,0 +1,246 @@
+.navbar {
+    padding: 20px 0 18px;
+    z-index: 10000;
+    transition: 0.2s;
+
+    &_container {
+        padding: 0 15px;
+    }
+
+    &.sticky {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: rgba($black, 0.8);
+        color: $white;
+        backdrop-filter: blur(2px);
+
+        & + .promo,
+        & + header {
+            margin-top: 76px;
+        }
+
+        & + main {
+            margin-top: 91px;
+        }
+
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner:after {
+            background: $white;
+        }
+
+        .navbar_user-search {
+            border-color: $white;
+
+            .navbar_user-search_btn,
+            .navbar_user-search_input,
+            .navbar_user-search_input::placeholder {
+                color: $white;
+            }
+        }
+    }
+
+    &_brand {
+        &-link {
+            text-transform: uppercase;
+            font-family: $ms;
+            font-weight: 800;
+            margin-left: 15px;
+        }
+    }
+
+    &_user {
+        font-family: $prt;
+
+        &-account {
+            font-size: 14px;
+            margin: 0 10px;
+
+            a:hover {
+                color: $red;
+            }
+        }
+
+        &-search {
+            //border-bottom: 1px solid $text;
+            align-items: center;
+            margin-right: 15px;
+
+            &_input {
+                padding: 5px;
+                font-family: $prt;
+                color: $text;
+                display: none;
+            }
+
+            &_btn {
+                color: $text;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_submenu {
+        display: none;
+        font-family: $prt;
+        text-transform: uppercase;
+        padding-top: 30px;
+
+        &.is-active-nav {
+            display: inline-block;
+        }
+
+        &-link {
+            margin: 10px 0;
+            a {
+                padding: 0 5px;
+                display: inline-block;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+                &:hover {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+
+    .hamburger-box {
+        width: 25px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: -2px;
+        width: 25px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 4px;
+        position: absolute;
+        //transition-property: transform background;
+        //transition-duration: .2s;
+        transition-timing-function: ease;
+
+        &::before {
+            width: 25px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 4px;
+            position: absolute;
+            //transition-property: transform background;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            content: "";
+            display: block;
+            top: -10px;
+        }
+
+        &::after {
+            width: 25px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 4px;
+            position: absolute;
+
+            //transition-property: transform background;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            content: "";
+            display: block;
+            bottom: -10px;
+        }
+    }
+
+    .hamburger--minus {
+        .hamburger-inner {
+            &::before {
+                transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+            }
+
+            &::after {
+                transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+            }
+        }
+    }
+
+    .hamburger--minus.is-active {
+        .hamburger-inner {
+            &::before {
+                opacity: 0;
+                transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+                top: 0;
+            }
+
+            &::after {
+                opacity: 0;
+                transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 578.98px) {
+    .navbar.sticky {
+        .navbar_submenu.is-active-nav {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .navbar {
+        &_conatiner {
+            padding: 0 30px;
+        }
+        &.sticky + main {
+            margin-top: 106px !important;
+        }
+        &.sticky + header {
+            margin-top: 81px;
+        }
+    }
+}
+
+@media (min-width: 991.98px) {
+    .navbar {
+        &_container {
+            padding: 0 50px;
+        }
+        &.sticky + .promo,
+        &.sticky + header {
+            margin-top: 95px;
+        }
+        &.sticky + main {
+            margin-top: 120px !important;
+        }
+        &_brand {
+            font-size: 30px;
+        }
+        &_user {
+            i {
+                font-size: 26px;
+            }
+            &-account {
+                margin: 0 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1199.98px) {
+    .navbar {
+        &.sticky + main {
+            margin-top: 140px !important;
+        }
+        &.sticky + header {
+            margin-top: 89px !important;
+        }
+    }
+}

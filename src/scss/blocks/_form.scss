@@ -1,0 +1,40 @@
+.form_type_8 {
+    font-family: $ms;
+    .field {
+        width: 100%;
+        label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px 15px;
+            font-size: 14px;
+            font-weight: normal;
+            border: 1px solid $foonav;
+            font-family: $ms;
+            margin: 10px 0;
+
+            &:focus {
+                border-left: 5px solid $field;
+                padding: 5px 11px;
+            }
+        }
+    }
+}
+@media (min-width: 767.98px) {
+    .form_type_8 {
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .field {
+            width: calc(50% - 15px);
+        }
+        label {
+            font-size: 14px !important;
+        }
+    }
+}

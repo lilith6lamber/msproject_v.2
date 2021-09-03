@@ -1,0 +1,209 @@
+.header_contact {
+    background-image: url('../img/contactbg.jpg');
+    padding: 100px 25px;
+    color: $white;
+    box-shadow: $shadow;
+    @include headerBg;
+    margin: 15px 15px 0;
+
+    &-title {
+        @include headerTitle($white, 32px);
+
+        &::after {
+            max-width: 50px;
+        }
+    }
+
+    &-subtitle {
+        font-family: $ms;
+        font-size: 14px;
+    }
+}
+
+.contact {
+    &_form {
+        &-field {
+            &_label {
+                text-transform: uppercase;
+                font-size: 14px;
+                margin: 10px 0;
+                display: block;
+                @include ms_bold;
+            }
+
+            &_input {
+                width: 100%;
+                font-family: $ms;
+                border: 2px solid $field;
+                padding: 10px;
+
+                &:focus {
+                    border-left-color: $red;
+                }
+            }
+        }
+
+        &-btn {
+            @include btnSolid($text);
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    &_info {
+        margin-top: 30px;
+
+        &-brand {
+            text-align: center;
+            @include ms_bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        &-list {
+            @include ms_semibold;
+            @include flexCenter;
+            flex-direction: column;
+            font-size: 12px;
+
+            li {
+                margin-bottom: 5px;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                a {
+                    padding-bottom: 2px;
+                    position: relative;
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+
+            &_mail {
+                color: $blue;
+            }
+        }
+
+        &-socials {
+            &_title {
+                font-size: 14px;
+                margin: 25px 0 20px;
+                @include ms_bold;
+                text-align: center;
+            }
+
+            &_list {
+                @include flexCenter;
+
+                li {
+                    margin-right: 15px;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid $black;
+                        @include flexCenter;
+
+                        &:hover,
+                        &:focus {
+                            background-color: $black;
+                            color: $white;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:767.98px) {
+    .header_contact {
+        padding: 150px 50px;
+        margin: 20px 30px 0;
+
+        &-title {
+            @include headerTitle($white, 64px);
+
+            &::after {
+                max-width: 150px;
+            }
+        }
+
+        &-subtitle {
+            font-size: 30px;
+        }
+    }
+
+    .contact {
+        &_form {
+            .fields_wrapper {
+                .contact_form-field {
+                    width: calc(50% - 15px);
+
+                    &:first-of-type {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:991.98px) {
+    .header_contact {
+        padding: 200px 50px;
+
+        &-title {
+            @include headerTitle($white, 80px);
+
+            &::after {
+                max-width: 150px;
+            }
+        }
+    }
+
+    .contact {
+        &_form {
+            &-btn {
+                margin-left: 0;
+            }
+        }
+
+        &_info {
+            padding-left: 50px;
+            &-brand {
+                text-align: left;
+                font-size: 26px
+            }
+
+            &-list {
+                @include ms_semibold;
+                align-items: flex-start;
+
+                li {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &-socials {
+                &_title {
+                    text-align: left;
+                    font-size: 26px
+                }
+
+                &_list {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

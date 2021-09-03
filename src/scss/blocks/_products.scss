@@ -1,0 +1,63 @@
+.products {
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: .3s;
+            background: url('../../img/icons/ajax-loader.gif') no-repeat;
+            background-position: center center;
+
+            &:hover {
+                box-shadow: $shadow;
+            }
+
+            &_img {
+                @include imgFit;
+                height: auto;
+            }
+
+            &_info {
+
+                .name,
+                .price {
+                    display: block;
+                    font-size: 14px;
+                }
+
+                .name {
+                    font-family: $prt;
+                    text-transform: capitalize;
+                }
+
+                .price {
+                    font-family: $pn;
+                    padding: 5px 0;
+                }
+            }
+
+            &_action {
+                justify-content: space-around;
+                margin: 10px 0;
+
+                a {
+                    width: calc(50% - 20px);
+                    border: 1px solid $text;
+                    @include ms_bold;
+                    text-transform: uppercase;
+                    padding: 10px 0px;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+
+                    &:hover {
+                        background: $text;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

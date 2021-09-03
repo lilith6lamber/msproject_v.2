@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"A B O U T"})
+
+<body>
+    @@include('components/_nav.html')
+    <header class="about_header header">
+        <div class="container">
+            <h1 class="about_header-title">About us</h1>
+        </div>
+    </header>
+    <main class="fluid">
+        <section class="about_founder">
+            <div class="container d-flex flex-wrap align-items-center justify-content-between">
+                <div class="about_founder-img_wrapper col-12 col-md-6 col-lg-5">
+                    <picture>
+                        <source type="image/webp" srcset="img/tracy.webp">
+                        <source type="image/jpeg" srcset="img/tracy.jpg">
+                        <img src="img/tracy.jpg" alt="tracy">
+                    </picture>
+                </div>
+                <div class="about_founder-text col-12 col-md-5 col-lg-6">
+                    <h2 class="about_founder-text_name">Tracy Reese</h2>
+                    <div class="about_founder-text_wrapper d-flex flex-wrap">
+                        <div class="column">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam enim maxime et
+                                adipisci
+                                provident
+                                nostrum minima! Asperiores ab expedita commodi beatae consectetur vero dolorum dicta
+                                et
+                                facere
+                                vitae? Veritatis, qui!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ullam adipisci
+                                commodi
+                                deserunt expedita repellendus consequuntur aperiam.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi recusandae, quaerat
+                                nam
+                                consectetur maxime ex doloremque.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta eaque natus
+                                ipsum,
+                                quo exercitationem qui officia possimus earum aliquam cupiditate nesciunt omnis et
+                                impedit
+                                nemo. At quos excepturi architecto?
+                            </p>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis
+                                explicabo
+                                veritatis eaque voluptas magni saepe est aspernatur aut culpa id, doloremque
+                                laudantium
+                                alias consequuntur distinctio doloribus porro enim! Quis?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about_company">
+            <div class="container-fluid p-0 col-12 col-md-6">
+                <div class="about_company-text_img">
+                    <picture>
+                        <source type="image/webp" srcset="img/company.webp">
+                        <source type="image/jpeg" srcset="img/company.jpg">
+                        <img src="img/company.jpg" alt="company">
+                    </picture>
+                </div>
+            </div>
+            <div class="container col-12 col-md-6">
+                <div class="about_company-text">
+                    <h2 class="about_company-text_title">Company</h2>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consectetur
+                        necessitatibus
+                        optio, alias voluptatem veritatis quod reiciendis placeat delectus beatae, recusandae harum
+                        enim
+                        aliquid natus reprehenderit porro voluptatibus esse laborum?
+                    </p>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sapiente ipsa, eos rem alias
+                        nostrum modi adipisci architecto aut dicta.
+                    </p>
+                    <p class="paragraph">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorem nesciunt deleniti
+                        consequatur accusantium.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <div class="about_newsletter">
+            <div class="container d-flex flex-wrap col-12 align-items-center">
+                <p class="about_newsletter-title col-12 col-md-3">subscribe us for more lastest news</p>
+                <form class="about_newsletter-form col-12 col-md-8" method="POST">
+                    <input class="about_newsletter-form_input" id="newsletter" type="email" name="email"
+                        placeholder="Enter your email">
+                    <button class="about_newsletter-form_btn" type="button"><i class="icon-send"></i></button>
+                </form>
+            </div>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+
+</html>

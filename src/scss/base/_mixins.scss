@@ -1,0 +1,125 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: local("#{$file}"),
+        url('../fonts/#{$file}.woff2') format('woff2'),
+        url('../fonts/#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@mixin imgFit {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@mixin ms_bold {
+    font-family: $ms;
+    font-weight: 700;
+}
+
+@mixin ms_semibold {
+    font-family: $ms;
+    font-weight: 600;
+}
+
+@mixin ms_light {
+    font-family: $ms;
+    font-weight: 300;
+}
+
+@mixin main_bg {
+    box-shadow: $shadow;
+    background: $white;
+}
+
+@mixin btnSolid($color) {
+    @include ms_bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 15px 50px;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @if($color==$text) {
+        background: $text;
+        color: $white;
+        border: 2px solid transparent;
+
+        &:hover {
+            border-color: $text;
+            background-color: transparent;
+            color: $text;
+        }
+    }
+
+    @else if($color==$white) {
+        transform: perspective(1px) translateZ(0);
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        background: $color;
+        color: $text;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: $red;
+            height: 4px;
+            transition-property: right;
+            transition-duration: .5s;
+            transition-timing-function: ease-out;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            &::before {
+                right: 0;
+            }
+        }
+    }
+}
+
+@mixin headerTitle($color, $font) {
+    font-family: $prt;
+    position: relative;
+    color: $color;
+    font-size: $font;
+
+    &::after {
+        position: absolute;
+        width: 90%;
+        height: 2px;
+        content: '';
+        top: 50%;
+        background-color: $color;
+        transform: translateY(50%);
+        margin-left: 20px;
+        max-width: 50px;
+    }
+}
+
+@mixin headerBg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

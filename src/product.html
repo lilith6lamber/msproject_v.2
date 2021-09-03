@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"P R O D U C T"})
+
+<body>
+    @@include('components/_nav.html')
+    <header class="single">
+        <div class="single-wrapper d-flex flex-wrap">
+            <div class="container d-flex flex-wrap justify-content-center slider-wrapper">
+                <ul class="single_slider">
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single01.webp">
+                            <source type="image/jpeg" srcset="img/products/single01.jpg">
+                            <img src="img/products/single01.jpg" alt="product">
+                        </picture>
+                    </li>
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single02.webp">
+                            <source type="image/jpeg" srcset="img/products/single02.jpg">
+                            <img src="img/products/single02.jpg" alt="product">
+                        </picture>
+                    </li>
+                    <li class="single_slider-slide">
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single03.webp">
+                            <source type="image/jpeg" srcset="img/products/single03.jpg">
+                            <img src="img/products/single03.jpg" alt="product">
+                        </picture>
+                    </li>
+                </ul>
+                <div class="single_slider-controls">
+                    <a class="slider-control slider-control--prev" href="javascript:void(0)">
+                        <i class="icon-angle-left"></i>
+                    </a>
+                    <a class="slider-control slider-control--next" href="javascript:void(0)">
+                        <i class="icon-angle-right"></i>
+                    </a>
+                </div>
+                <ul class="single_slider-thumbnails d-flex align-items-center">
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single01-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single01-thumbnail.jpg">
+                            <img src="img/products/single01-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single02-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single02-thumbnail.jpg">
+                            <img src="img/products/single02-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source type="image/webp" srcset="img/products/single03-thumbnail.webp">
+                            <source type="image/jpeg" srcset="img/products/single03-thumbnail.jpg">
+                            <img src="img/products/single03-thumbnail.jpg" alt="thumbnail">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+            <div class="single_info">
+                <h2 class="single_info-itemname">Les Nouveaux Tops</h2>
+                <p class="single_info-description">
+                    Comfy yet stylish, the Luca Longline Cardigan from Atmos&Here is a
+                    trans-seasonal staple.
+                </p>
+                <div class="single_info-options">
+                    <div class="options-wrapper d-flex">
+                        <div class="single_info-options_size options">
+                            <span class="name">Size</span>
+                            <select class="select" id="size" name="size">
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                            </select>
+                        </div>
+                        <div class="single_info-options_color options">
+                            <span class="name">Color</span>
+                            <select class="select" id="color" name="color">
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                                <option value="white">White</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="options-wrapper d-flex">
+                        <div class="single_info-options_qty options">
+                            <span class="name">Qty</span>
+                            <div class="qty_wrapper d-flex justify-content-center">
+                                <a class="qty-minus qty-el" href="javascript:void(0)">-</a>
+                                <span class="qty-counter qty-el">1</span>
+                                <a class="qty-plus qty-el" href="javascript:void(0)">+</a>
+                            </div>
+                        </div>
+                        <div class="single_info-options_rate options">
+                            <div class="stars">
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star yellow"></i>
+                                <i class="icon-star"></i>
+                            </div>
+                            <a href="javascript:void(0)">3 ratings</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="single_price">$49</span>
+                <div class="single_action d-flex flex-wrap">
+                    <a class="single_action-btn single_action-btn--cart" href="javascript:void(0)">Add to cart</a>
+                    <a class="single_action-btn single_action-btn--favorites" href="javascript:void(0)">Add to favorites</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="single_tabs">
+        <div class="single_tabs-wrapper">
+            <div class="single_tabs-group d-flex flex-wrap">
+                <button class="tab-button active" data-id="description">Description</button>
+                <button class="tab-button" data-id="additional">Additional information</button>
+                <button class="tab-button" data-id="reviews">Reviews</button>
+            </div>
+            <div class="single_tabs-content">
+                <div class="content active" id="description">
+                    <p>Distinctively create client-centered networks whereas technically sound customer service.
+                        Holisticly
+                        synergize enabled supply chains through timely innovation. Seamlessly disseminate flexible
+                        vortals
+                        without high-payoff innovation.</p>
+                    <p>Continually harness reliable products after cross-platform scenarios. Authoritatively
+                        disintermediate
+                        economically sound e-business via granular e-commerce. Rapidiously embrace innovative results
+                        without
+                        process-centric interfaces.</p>
+                    <p>Globally architect economically sound bandwidth with installed base
+                        materials. Uniquely supply wireless niches through economically sound innovation.</p>
+                </div>
+                <div class="content" id="additional">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi aperiam omnis, nihil, nam
+                        dolorem
+                        excepturi iste consequatur veniam assumenda aut. Pariatur accusantium rerum culpa laudantium
+                        architecto
+                        quisquam, iusto maiores.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis sapiente, deleniti perspiciatis
+                        impedit
+                        nesciunt beatae praesentium quod aliquam accusamus quasi atque. Obcaecati nemo tenetur
+                        necessitatibus
+                        dolorem qui quas aliquam quibusdam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora animi aperiam omnis, nihil, nam
+                        dolorem
+                        excepturi iste consequatur veniam assumenda aut. Pariatur accusantium rerum culpa laudantium
+                        architecto
+                        quisquam, iusto maiores.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis sapiente, deleniti perspiciatis
+                        impedit
+                        nesciunt beatae praesentium quod aliquam accusamus quasi atque. Obcaecati nemo tenetur
+                        necessitatibus
+                        dolorem qui quas aliquam quibusdam.</p>
+                </div>
+                <div class="content" id="reviews">
+                    <ul id="reviews-list">
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review1.webp">
+                                    <source type="image/jpeg" srcset="img/review1.jpg">
+                                    <img src="img/review1.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Mary J.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review2.webp">
+                                    <source type="image/jpeg" srcset="img/review2.jpg">
+                                    <img src="img/review2.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Garry D.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review3.webp">
+                                    <source type="image/jpeg" srcset="img/review3.jpg">
+                                    <img src="img/review3.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Hannah G.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                        <li class="review_wrapper d-flex flex-wrap">
+                            <div class="user d-flex align-items-center">
+                                <picture>
+                                    <source type="image/webp" srcset="img/review4.webp">
+                                    <source type="image/jpeg" srcset="img/review4.jpg">
+                                    <img src="img/review4.jpg" alt="user">
+                                </picture>
+                                <span class="user-name">Mike B.</span>
+                            </div>
+                            <div class="user-review">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam minus,
+                                perspiciatis ad
+                                pariatur ipsam, id qui omnis nemo quam eligendi tempora nam praesentium error ipsa
+                                ab eos?
+                                Et, ab magni.
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="warning">You have to <a id="open-login-modal" href="javascript:void(0)">log in</a> to
+                        leave a
+                        review.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="single_related">
+        <div class="container">
+            <h3 class="single_related-title">Related Products</h3>
+            <ul class="single_related-list d-flex flex-wrap">
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+                <li class="single_related-list_item">
+                    <picture>
+                        <source type="image/webp" srcset="img/products/placeholder.webp">
+                        <source type="image/jpeg" srcset="img/products/placeholder.jpg">
+                        <img src="img/products/placeholder.jpg" alt="placeholder">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    @@include('components/_footer.html')
+    <script>
+        drawTabs();
+    </script>
+</body>
+
+</html>

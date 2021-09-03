@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B L O G</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container-fluid navbar_container d-flex align-items-center justify-content-between">
+        <div class="navbar_brand d-flex align-items-center">
+            <button class="hamburger hamburger--minus" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <a class="navbar_brand-link" href="index.html">Store</a>
+        </div>
+        <div class="navbar_user d-flex align-items-center">
+            <form class="navbar_user-search d-flex" action="">
+                <input class="navbar_user-search_input" type="text" name="searchQuery" id="searchQuery" placeholder="Search...">
+                <button class="navbar_user-search_btn" type="submit">
+                    <i class="icon-search"></i>
+                </button>
+            </form>
+            <div class="navbar_user-account d-flex align-items-center">
+                <a id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+            </div>
+            <div class="navbar_user-cart">
+                <a href="cart.html">
+                    <i class="icon-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navbar_container">
+        <ul class="navbar_submenu" id="navbar_submenu">
+            <li class="navbar_submenu-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="blog.html">Blog</a>
+            </li>
+            <li class="navbar_submenu-link">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <header class="blog_header header">
+        <div class="container">
+            <h1 class="blog_header-title">Dropshipping.</h1>
+            <p class="blog_header-subtitle">How I’ve made $10k+ / mo with dropshipping.</p>
+            <a class="blog_header-btn" href="javascript:void(0)">Read more</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="blog_filter">
+                <p class="blog_filter-pointer">
+                    Filter by category
+                    <i class="icon-angle-down"></i>
+                </p>
+                <div class="blog_filter-wrapper flex-wrap">
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter="all">All</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".lifestyle">Lifestyle</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".fashion">Fashion</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".news">News</button>
+                    <button class="blog_filter-wrapper_trigger" type="button" data-filter=".business">How to sell online</button>
+                </div>
+            </div>
+            <ul class="blog_posts d-flex flex-wrap"></ul>
+            <section class="blog_instagram">
+                <h2 class="blog_instagram-title">Instagram</h2>
+                <div class="blog_instagram-profile d-flex">
+                    <span class="blog_instagram-profile_brand">Store</span>
+                    <a class="blog_instagram-profile_link" href="javascript:void(0)"
+                        target="_blank">@minstoreproject</a>
+                </div>
+                <ul class="blog_instagram-feed">
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_1-500.webp 768w, 
+                                  img/instagram/insta_1-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_1-300.jpg"
+                                    data-srcset="img/instagram/insta_1-500.jpg 768w, 
+                                  img/instagram/insta_1-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_2-500.webp 768w, 
+                                img/instagram/insta_2-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_2-300.jpg"
+                                    data-srcset="img/instagram/insta_2-500.jpg 768w, 
+                                img/instagram/insta_2-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_3-500.webp 768w, 
+                                img/instagram/insta_3-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_3-300.jpg"
+                                    data-srcset="img/instagram/insta_3-500.jpg 768w, 
+                                img/instagram/insta_3-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_4-500.webp 768w, 
+                                img/instagram/insta_4-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_4-300.jpg"
+                                    data-srcset="img/instagram/insta_4-500.jpg 768w, 
+                                img/instagram/insta_4-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_5-500.webp 768w, 
+                                img/instagram/insta_5-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_5-300.jpg"
+                                    data-srcset="img/instagram/insta_5-500.jpg 768w, 
+                                img/instagram/insta_5-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="blog_instagram-feed_item">
+                        <div class="overlay">
+                            <a class="share" href="javascript:void(0)">
+                                <i class="icon-share"></i>
+                            </a>
+                            <a class="like" href="javascript:void(0)">
+                                <i class="icon-heart-filled"></i>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" target="_blank">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/instagram/insta_6-500.webp 768w, 
+                                img/instagram/insta_6-800.webp 1000w" />
+                                <img alt="instagram post" class="lazy" data-src="img/instagram/insta_6-300.jpg"
+                                    data-srcset="img/instagram/insta_6-500.jpg 768w, 
+                                img/instagram/insta_6-800.jpg 1000w" data-sizes="100w" />
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="footer" id="bottom">
+    <div class="container">
+        <h2 class="footer_brandname">Store</h2>
+        <nav class="footer_nav d-flex flex-wrap">
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">My Account</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">How to buy</a></li>
+                    <li><a href="javascript:void(0)">General Information</a></li>
+                    <li><a href="javascript:void(0)">Payment</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Returns</a></li>
+                    <li><a href="javascript:void(0)">Exchanges</a></li>
+                    <li><a href="javascript:void(0)">Gift Card</a></li>
+                    <li><a href="javascript:void(0)">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Company</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">About us</a></li>
+                    <li><a href="javascript:void(0)">Offices</a></li>
+                    <li><a href="javascript:void(0)">Stores</a></li>
+                    <li><a href="javascript:void(0)">Work with us</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_nav-group">
+                <h3 class="footer_nav-group_trigger">Policies</h3>
+                <ul class="footer_nav-group_list">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Shipping</a></li>
+                    <li><a href="javascript:void(0)">Gift Card Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="footer_socials d-flex justify-content-center">
+            <li><a href="https://facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://dribbble.com" target="_blank"><i class="icon-dribbble"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="icon-linkedin"></i></a></li>
+        </ul>
+        <p class="footer_copy">Copyright &copy; 2018 | Hogash.com</p>
+    </div>
+</footer>
+<a href="javascript:void(0)" class="scroll_top"></a>
+<a href="#bottom" class="scroll_bottom"></a>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

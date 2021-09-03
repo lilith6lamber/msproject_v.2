@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bag:before {
+    content: "\e921";
+}
+.icon-shoe:before {
+    content: "\e91e";
+}
+.icon-sofa:before {
+    content: "\e91f";
+}
+.icon-tshirt:before {
+    content: "\e920";
+}
+.icon-filter:before {
+    content: "\e91a";
+}
+.icon-share:before {
+    content: "\e917";
+}
+.icon-checkbox:before {
+    content: "\e902";
+}
+.icon-check:before {
+    content: "\e905";
+}
+.icon-search:before {
+    content: "\e906";
+}
+.icon-close:before {
+    content: "\e900";
+}
+.icon-instagram:before {
+    content: "\e901";
+}
+.icon-reply:before {
+    content: "\e91d";
+}
+.icon-comments:before {
+    content: "\e91b";
+}
+.icon-clock:before {
+    content: "\e91c";
+}
+.icon-heart:before {
+    content: "\e918";
+}
+.icon-heart-filled:before {
+    content: "\e919";
+}
+.icon-web:before {
+    content: "\e916";
+}
+.icon-send:before {
+    content: "\e915";
+}
+.icon-star:before {
+    content: "\e907";
+}
+.icon-pinterest:before {
+    content: "\e908";
+}
+.icon-eye:before {
+    content: "\e909";
+}
+.icon-google:before {
+    content: "\e90e";
+}
+.icon-map-marker:before {
+    content: "\e90f";
+}
+.icon-mail:before {
+    content: "\e910";
+}
+.icon-phone:before {
+    content: "\e911";
+}
+.icon-dribbble:before {
+    content: "\e912";
+}
+.icon-linkedin:before {
+    content: "\e913";
+}
+.icon-shopping-cart:before {
+    content: "\e914";
+}
+.icon-facebook:before {
+    content: "\e903";
+}
+.icon-twitter:before {
+    content: "\e904";
+}
+.icon-angle-down:before {
+    content: "\e90a";
+}
+.icon-angle-up:before {
+    content: "\e90b";
+}
+.icon-angle-right:before {
+    content: "\e90c";
+}
+.icon-angle-left:before {
+    content: "\e90d";
+}

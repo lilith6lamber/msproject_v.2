@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"C A T A L O G"})
+
+<body>
+    @@include('components/_nav.html')
+    <header class="catalog_header header">
+        <div class="container-fluid p-0 d-flex flex-wrap align-items-center">
+            <div class="catalog_header-offer">
+                <h1 class="catalog_header-offer_title">50% sale</h1>
+                <p class="catalog_header-offer_subtitle">On all orders above $100 + free shipping.</p>
+                <a href="javascript:void(0)" class="catalog_header-offer_btn">Read more</a>
+            </div>
+            <ul class="catalog_header-categories">
+                <li class="catalog_header-categories_item d-flex">
+                    <div class="text">
+                        <a class="title" href="javascript:void(0)">Accessories <i class="icon-angle-right"></i> </a>
+                        <p class="subtitle">Refine your Selection</p>
+                    </div>
+                    <div class="picture">
+                        <picture>
+                            <source srcset="img/products/1.webp" type="image/webp">
+                            <source srcset="img/products/1.jpg" type="image/jpeg">
+                            <img src="img/products/1.jpg" alt="media">
+                        </picture>
+                    </div>
+                </li>
+                <li class="catalog_header-categories_item d-flex">
+                    <div class="text">
+                        <a class="title" href="javascript:void(0)">Shoes</a>
+                        <p class="subtitle">Refine your Selection</p>
+                    </div>
+                    <div class="picture">
+                        <picture>
+                            <source srcset="img/products/2.webp" type="image/webp">
+                            <source srcset="img/products/2.jpg" type="image/jpeg">
+                            <img src="img/products/2.jpg" alt="media">
+                        </picture>
+                    </div>
+                </li>
+                <li class="catalog_header-categories_item d-flex">
+                    <div class="text">
+                        <a class="title" href="javascript:void(0)">Daily essentials</a>
+                        <p class="subtitle">Refine your Selection</p>
+                    </div>
+                    <div class="picture">
+                        <picture>
+                            <source srcset="img/products/3.webp" type="image/webp">
+                            <source srcset="img/products/3.jpg" type="image/jpeg">
+                            <img src="img/products/3.jpg" alt="media">
+                        </picture>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid d-flex flex-wrap catalog-wrapper">
+        <main class="catalog_main">
+            <div class="container">
+                <div class="catalog_main-sort d-flex">
+                    <span>Sort:</span>
+                    <a data-sort="price:asc" class="catalog_main-sort_trigger catalog_main-sort_trigger--asc"
+                        href="javascript:void(0)">
+                        lower price
+                    </a>
+                    <a data-sort="price:desc" class="catalog_main-sort_trigger catalog_main-sort_trigger--desc"
+                        href="javascript:void(0)">
+                        highest price
+                    </a>
+                </div>
+                <ul class="products_list catalog_list"></ul>
+            </div>
+        </main>
+        <aside class="catalog_aside">
+            <div class="container">
+                <h3 class="catalog_aside-header">
+                    <i class="icon-filter"></i>
+                    Filter by:
+                </h3>
+                <div class="catalog_aside-categories">
+                    <h4 class="catalog_aside-categories_title d-flex align-items-center">
+                        Category
+                        <i class="icon-angle-down"></i>
+                    </h4>
+                    <ul class="catalog_aside-categories_list">
+                        <li class="list-item">
+                            <a class="filter-cat" href="javascript:void(0)" data-filter=".shoes">Shoes <i class="icon-shoe"></i></a>
+                        </li>
+                        <li class="list-item">
+                            <a class="filter-cat" href="javascript:void(0)" data-filter=".accessories">Accessories <i class="icon-bag"></i></a>
+                        </li>
+                        <li class="list-item">
+                            <a class="filter-cat" href="javascript:void(0)" data-filter=".apparel">Clothes <i class="icon-tshirt"></i></a>
+                        </li>
+                        <li class="list-item">
+                            <a class="filter-cat" href="javascript:void(0)" data-filter=".homedeco">Daily essentials <i class="icon-sofa"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog_aside-colors">
+                    <h4 class="catalog_aside-colors_title d-flex align-items-center">
+                        Color
+                        <i class="icon-angle-down"></i>
+                    </h4>
+                    <ul class="catalog_aside-colors_list d-flex">
+                        <li class="list-item">
+                            <a class="filter_color filter_color--black" href="javascript:void(0)" data-filter=".black"></a>
+                        </li>
+                        <li class="list-item">
+                            <a class="filter_color filter_color--white" href="javascript:void(0)" data-filter=".white"></a>
+                        </li>
+                        <li class="list-item">
+                            <a class="filter_color filter_color--silver" href="javascript:void(0)" data-filter=".silver"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="catalog_aside-btn" href="javascript:void(0)" data-filter="all">Show all</a>
+            </div>
+        </aside>
+    </div>
+    @@include('components/_footer.html')
+</body>
+
+</html>

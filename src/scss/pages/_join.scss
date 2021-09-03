@@ -1,0 +1,154 @@
+// JOIN
+.join {
+    background-color: $white;
+    box-shadow: $shadow;
+    font-family: $ms;
+
+    &_form {
+        .checkbox-group {
+            margin: 30px 0;
+            font-size: 12px;
+            width: 100%;
+            .checkbox {
+                margin-bottom: 10px;
+                a {
+                    display: inline-block;
+                    margin: 0 3px;
+                    color: $blue;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &-action {
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            &_return {
+                &:hover {
+                    color: $red;
+                }
+                i {
+                    margin-right: 5px;
+                }
+            }
+            &_submit {
+                @include btnSolid($text);
+                margin: 0;
+                max-width: 110px;
+                font-size: 11px;
+                padding: 10px 15px;
+            }
+        }
+    }
+}
+
+// FORM VALIDATION
+label.error {
+    color: $red;
+    font-family: $pn;
+    text-transform: none !important;
+}
+
+// CUSTOM CHECKBOX
+input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        &:before {
+            content: "•";
+            color: $white;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $black;
+            border-radius: 2px;
+            margin-right: 10px;
+            text-align: center;
+        }
+    }
+    &:checked + label::before {
+        background: $black;
+        transition: $animated;
+    }
+}
+
+@media (min-width: 767.98px) {
+    .join {
+        &_form {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            .checkbox-group {
+                margin: 30px 0;
+                font-size: 12px;
+                width: 100%;
+                .checkbox {
+                    margin-bottom: 10px;
+                    a {
+                        display: inline-block;
+                        margin: 0 3px;
+                    }
+                }
+            }
+            &-action {
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                &_return {
+                    &:hover {
+                        color: $red;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                &_submit {
+                    @include btnSolid($text);
+                    margin: 0;
+                    max-width: 110px;
+                    font-size: 11px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}
+
+
+/// LOG IN
+.popup {
+    &_login {
+        &-title {
+            color: $text !important;
+            font-family: $ms;
+        }
+        &-form {
+            &_email, &_password {
+                border: 1px solid $gray;
+                width: 100%;
+                max-width: 300px;
+                padding: 10px 15px;
+                margin-bottom: 10px;
+                transition: $animated;
+                font-family: $ms;
+                &:focus {
+                    border-color: $text;
+                }
+            }
+            &_submit {
+                @include btnSolid($text);
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+}

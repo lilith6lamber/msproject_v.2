@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"C H E C K O U T"})
+
+<body>
+    @@include('components/_nav.html')
+    <main class="checkout">
+        <div class="container d-flex flex-wrap checkout_container">
+            <form class="checkout_form d-flex flex-wrap form_type_8" action="#" method="POST">
+                <fieldset class="checkout_form-fieldset d-flex flex-wrap justify-content-between">
+                    <legend>Billing info</legend>
+                    <div class="field">
+                        <label for="firstname">First name *</label>
+                        <input id="firstname" type="text" name="firstname">
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Last name *</label>
+                        <input id="lastname" type="text" name="lastname">
+                    </div>
+                    <div class="field">
+                        <label for="companyname">Company name</label>
+                        <input id="companyname" type="text" name="companyname">
+                    </div>
+                    <div class="field">
+                        <label for="address">Address *</label>
+                        <input id="address" type="text" name="address">
+                    </div>
+                    <div class="field">
+                        <label for="city">City * </label>
+                        <input id="city" type="text" name="city">
+                    </div>
+                    <div class="field">
+                        <label for="country">Country *</label>
+                        <input id="country" type="text" name="country">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email *</label>
+                        <input id="email" type="email" name="email">
+                    </div>
+                    <div class="field">
+                        <label for="tel">Phone *</label>
+                        <input id="tel" type="tel" name="tel">
+                    </div>
+                    <div class="checkout_form-action d-flex flex-wrap">
+                        <button class="btn btn-first" type="submit">Continue</button>
+                        <input id="isDifferent" type="checkbox" name="isDifferent">
+                        <label for="isDifferent"> Ship to different address </label>
+                    </div>
+                </fieldset>
+                <fieldset
+                    class="checkout_form-fieldset checkout_form-fieldset--optional d-flex flex-wrap justify-content-between">
+                    <legend>Billing info</legend>
+                    <div class="field">
+                        <label for="firstname_2">First name *</label>
+                        <input id="firstname_2" type="text" name="firstname_2">
+                    </div>
+                    <div class="field">
+                        <label for="lastname_2">Last name *</label>
+                        <input id="lastname_2" type="text" name="lastname_2">
+                    </div>
+                    <div class="field">
+                        <label for="companyname_2">Company name</label>
+                        <input id="companyname_2" type="text" name="companyname_2">
+                    </div>
+                    <div class="field">
+                        <label for="address_2">Address *</label>
+                        <input id="address_2" type="text" name="address_2">
+                    </div>
+                    <div class="field">
+                        <label for="city_2">City * </label>
+                        <input id="city_2" type="text" name="city_2">
+                    </div>
+                    <div class="field">
+                        <label for="country_2">Country *</label>
+                        <input id="country_2" type="text" name="country_2">
+                    </div>
+                    <div class="field">
+                        <label for="email_2">Email *</label>
+                        <input id="email_2" type="email" name="email_2">
+                    </div>
+                    <div class="field">
+                        <label for="tel_2">Phone *</label>
+                        <input id="tel_2" type="tel" name="tel_2">
+                    </div>
+                    <button class="btn btn-second btn-full-submit" type="submit">Submit</button>
+                </fieldset>
+            </form>
+            <div class="checkout_payment">
+                <h3 class="checkout_payment-title">Your order</h3>
+                <div class="total-wrapper">
+                    <ul class="cart_total-list">
+                        <li class="cart_total-list_item d-flex justify-content-between">
+                            <span class="property">Subtotal</span>
+                            <span class="value">$450</span>
+                        </li>
+                        <li class="cart_total-list_item d-flex justify-content-between">
+                            <span class="property">Shipping</span>
+                            <span class="value">$50</span>
+                        </li>
+                        <li class="cart_total-list_item cart_total-list_item--total d-flex justify-content-between">
+                            <span class="property">Total cost</span>
+                            <span class="value">$500</span>
+                        </li>
+                    </ul>
+                    <div class="checkout_payment-options">
+                        <input id="direct" type="radio" name="payment" checked>
+                        <label class="radiolabel" for="direct">Direct bank transfer</label>
+                        <p class="checkout_payment-options_info">Make your payment directly into our bank account. Please use your Order
+                            ID as the
+                            payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                        </p>
+                        <input id="cheque" type="radio" name="payment">
+                        <label class="radiolabel" for="cheque">Cheque payment</label>
+                        <p class="checkout_payment-options_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis
+                            blanditiis
+                            consequatur officia ab, quam ducimus.</p>
+                        <input id="paypal" type="radio" name="payment">
+                        <label class="radiolabel" for="paypal">Paypal</label>
+                        <p class="checkout_payment-options_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <a class="btn btn-wide" href="javascript:void(0)">Proceed to checkout</a>
+            </div>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+    <script>
+        triggerSecondForm();
+    </script>
+</body>
+
+</html>
