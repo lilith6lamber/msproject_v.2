@@ -1,6 +1,6 @@
 .blog {
     &_header {
-        background: url('../../img/blogbg.jpg');
+        background: url('../img/blogbg.jpg');
         @include headerBg;
         padding: 60px 25px;
         color: $white;

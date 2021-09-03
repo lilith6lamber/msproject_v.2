@@ -71,6 +71,9 @@
             }
             &_btn {
                 @include btnSolid($text);
+                &:hover {
+                    background: $white; 
+                }
             }
             &_input,
             &_btn {

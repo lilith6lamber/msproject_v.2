@@ -362,7 +362,7 @@ function drawTabs() {
     }
 }
 
-
+/* 
 function countQty() {
     const qtyMinus = document.querySelectorAll('.qty-minus'),
         qtyPlus = document.querySelectorAll('.qty-plus'),
@@ -383,7 +383,7 @@ function validateSignUp() {
     signUpForm.addEventListener("submit", e => {
         e.preventDefault();
     })
-}
+} */
 
 
 // BLOG POSTS--------------------------
