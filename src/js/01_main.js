@@ -13,7 +13,7 @@ let itemsToShow = 12,
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    let lazyLoadInstance = new LazyLoad({ });
+    let lazyLoadInstance = new LazyLoad({});
     customSelect('select');
 
     userLogin();
@@ -22,17 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     drawSlider();
     scrollNav();
     new WOW().init();
-    baguetteBox.run('.gallery_lookbook', { });
+    baguetteBox.run('.gallery_lookbook', {});
     drawCatalog();
 
     const postsContainer = document.querySelector('.blog_posts');
     if (postsContainer != null) {
         drawPosts(postsContainer);
     }
+    const singlePostContainer = document.querySelector('.post_main');
+    if (singlePostContainer != null) {
+        drawSingle();
+    }
 
     const mapContainer = document.getElementById('map');
     if (mapContainer != null) {
         drawMap();
+    }
+
+    const checkoutContainer = document.querySelector('.checkout');
+    if (checkoutContainer != null) {
+        triggerSecondForm();
+    }
+
+    const tabsContainer = document.querySelector('.single_tabs');
+    if (tabsContainer != null) {
+        drawTabs();
     }
 
 });
@@ -55,8 +69,7 @@ function drawSlider() {
         const promoSlider = tns({
             container: '.promo_slider',
             controlsContainer: '.promo_slider-controls',
-            ...sliderDefaults,
-            autoplay: false
+            ...sliderDefaults
         });
     }
 

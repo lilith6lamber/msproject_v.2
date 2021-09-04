@@ -5,6 +5,7 @@
         position: relative;
         @include main_bg;
         padding: 30px 0;
+        overflow-y: hidden;
     }
 
     &_slider {
