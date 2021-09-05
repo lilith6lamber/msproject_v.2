@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
 function drawSlider() {
     const sliderDefaults = {
         items: 1,
@@ -102,51 +101,47 @@ function showMore() {
     drawCatalog();
 }
 
-function drawCatalog() {
-    let request = new XMLHttpRequest();
-    request.open('GET', 'data/data.json');
-    request.responseType = 'json';
-    request.send();
-    request.onload = function () {
-        if (request.status == 200) {
-            let json = request.response;
-            let img, html = '',
-                item, price, category, color;
-            totalItems = json.products.length;
-            let liclass = 'products_list-item',
-                newclass = `${liclass} wow fadeInUp`;
-            const catalogEl = document.querySelector('.products_list'),
-                fullCatalogEl = document.querySelector('.catalog_list');
-            if (catalogEl != null) {
-                if (catalogEl.classList.contains('catalog_list')) {
-                    itemsToShow = totalItems;
-                }
-                for (let i = 0; i < itemsToShow; i++) {
-                    img = json.products[i].img;
-                    item = json.products[i].itemname;
-                    price = json.products[i].price;
-                    category = json.products[i].category;
-                    color = json.products[i].color;
-                    if (i > itemsToShow) {
-                        liclass = newclass;
-                    }
-                    html += drawProdHTML(liclass, img, item, price, category, color);
-                }
-                catalogEl.innerHTML = html + '<li aria-hidden="true" class="hidden"></li>';
-                if (catalogEl.classList.contains('collection_list')) {
-                    checkDisplay();
-                }
-                if (fullCatalogEl) {
-                    const mixer = mixitup('.catalog_list', {
-                        animation: {
-                            effects: ''
-                        }
-                    });
-                }
+async function drawCatalog() {
+    let response = await fetch('data/data.json');
+    if (response.ok) {
+        let json = await response.json();
+        let img, html = '',
+            item, price, category, color;
+        totalItems = json.products.length;
+        let liclass = 'products_list-item',
+            newclass = `${liclass} wow fadeInUp`;
+        const catalogEl = document.querySelector('.products_list'),
+            fullCatalogEl = document.querySelector('.catalog_list');
+        if (catalogEl != null) {
+            if (catalogEl.classList.contains('catalog_list')) {
+                itemsToShow = totalItems;
             }
-        } else {
-            console.log(`Error: ${request.status} ${request.statusText}`);
+            for (let i = 0; i < itemsToShow; i++) {
+                img = json.products[i].img;
+                item = json.products[i].itemname;
+                price = json.products[i].price;
+                category = json.products[i].category;
+                color = json.products[i].color;
+                if (i > itemsToShow) {
+                    liclass = newclass;
+                }
+                html += drawProdHTML(liclass, img, item, price, category, color);
+            }
+            catalogEl.innerHTML = html + '<li aria-hidden="true" class="hidden"></li>';
+            if (catalogEl.classList.contains('collection_list')) {
+                checkDisplay();
+            }
+            if (fullCatalogEl) {
+                const mixer = mixitup('.catalog_list', {
+                    animation: {
+                        effects: ''
+                    }
+                });
+            }
         }
+    }
+    else {
+        console.log("HTTP Error: " + response.status);
     }
 }
 
@@ -178,7 +173,7 @@ function checkDisplay() {
 }
 
 
-function drawMap() {
+async function drawMap() {
     let map = L.map('map', {
         scrollWheelZoom: false,
         fullscreenControl: true,
@@ -215,16 +210,13 @@ function drawMap() {
         disableClusteringAtZoom: 16
     });
 
-    let request = new XMLHttpRequest();
-    request.open("GET", "data/data.json");
-    request.responseType = 'json';
-    request.send();
-    request.onload = function () {
-        if (request.status == 200) {
-            let json = request.response;
-            for (let i = 0; i < json.stores.length; i++) {
-                let popupData =
-                    `<div class="popup_general">
+
+    let response = await fetch('data/data.json');
+    if (response.ok) {
+        let json = await response.json();
+        for (let i = 0; i < json.stores.length; i++) {
+            let popupData =
+                `<div class="popup_general">
                             <p class="popup_general-city">${json.stores[i].city}</p>
                             <p class="popup_general-address">${json.stores[i].address}</p>
                             <p class="popup_general-location">${json.stores[i].location}</p>
@@ -232,20 +224,19 @@ function drawMap() {
                         <div class="popup_additional">
                             <p class="popup_additional-hours">${json.stores[i].ophours}</p>
                     `;
-                if (json.stores[i].phone != null) {
-                    popupData += `<a href="tel:${json.stores[i].phone}" class="popup_additional-phone"><i class="icon-phone"></i>${json.stores[i].phone}</a>`
-                }
-                if (json.stores[i].web != null) {
-                    popupData += `<a href="${json.stores[i].web}" target="_blank" class="popup_additional-site"><i class="icon-web"></i>Website</a>`
-                }
-                markers.addLayer(L.marker([json.stores[i].lat, json.stores[i].lng])
-                    .bindPopup(popupData)
-                )
+            if (json.stores[i].phone != null) {
+                popupData += `<a href="tel:${json.stores[i].phone}" class="popup_additional-phone"><i class="icon-phone"></i>${json.stores[i].phone}</a>`
             }
-            map.addLayer(markers);
-        } else {
-            console.log(`Error: ${request.status} ${request.statusText}`);
+            if (json.stores[i].web != null) {
+                popupData += `<a href="${json.stores[i].web}" target="_blank" class="popup_additional-site"><i class="icon-web"></i>Website</a>`
+            }
+            markers.addLayer(L.marker([json.stores[i].lat, json.stores[i].lng])
+                .bindPopup(popupData)
+            )
         }
+        map.addLayer(markers);
+    } else {
+        console.log("HTTP Error: " + response.status);
     }
 }
 
@@ -375,30 +366,6 @@ function drawTabs() {
     }
 }
 
-/* 
-function countQty() {
-    const qtyMinus = document.querySelectorAll('.qty-minus'),
-        qtyPlus = document.querySelectorAll('.qty-plus'),
-        qtyCounter = +document.querySelectorAll('.qty-counter').innerText;
-
-    qtyMinus.forEach(btn => {
-        btn.addEventListener("click", () => {
-            if (qtyCounter > 1) {
-                qtyCounter--;
-            }
-        })
-    })
-}
-
-function validateSignUp() {
-    const signUpForm = document.getElementById('join_form');
-
-    signUpForm.addEventListener("submit", e => {
-        e.preventDefault();
-    })
-} */
-
-
 // BLOG POSTS--------------------------
 
 let postID = 0;
@@ -410,38 +377,33 @@ function setID(id) {
 }
 
 
-function drawPosts(containerEl) {
-    const request = new XMLHttpRequest();
-    request.open('GET', 'data/data.json');
-    request.responseType = 'json';
-    request.send();
-    request.onload = function () {
-        if (request.status == 200) {
-            let html = '';
-            let json = request.response;
-            for (let i = 0; i < json.posts.length; i++) {
-                let img = json.posts[i].img,
-                    title = json.posts[i].title,
-                    id = json.posts[i].id,
-                    category = json.posts[i].category,
-                    author = json.posts[i].author,
-                    date = json.posts[i].date;
-                html += drawHTML(img, title, true, id, category);
-                if (id == localStorage.getItem('id')) {
-                    setData(id, img, title, author, date);
-                }
+async function drawPosts(containerEl) {
+    let response = await fetch('data/data.json');
+    if (response.ok) {
+        let json = await response.json();
+        let html = '';
+        for (let i = 0; i < json.posts.length; i++) {
+            let img = json.posts[i].img,
+                title = json.posts[i].title,
+                id = json.posts[i].id,
+                category = json.posts[i].category,
+                author = json.posts[i].author,
+                date = json.posts[i].date;
+            html += drawHTML(img, title, true, id, category);
+            if (id == localStorage.getItem('id')) {
+                setData(id, img, title, author, date);
             }
-
-            containerEl.innerHTML = html;
-            const mixer = mixitup(containerEl, {
-                animation: {
-                    effects: ''
-                }
-            });
-            //drawSingle();
-        } else {
-            console.log(`Error: ${request.status} ${request.statusText}`);
         }
+
+        containerEl.innerHTML = html;
+        const mixer = mixitup(containerEl, {
+            animation: {
+                effects: ''
+            }
+        });
+    }
+    else {
+        console.log("HTTP Error: " + response.status);
     }
 }
 

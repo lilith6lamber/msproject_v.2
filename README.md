@@ -1,5 +1,5 @@
 <h1>Overhaul of my final project in Beetroot Academy</h1>
-<p>This is multi-page website for a minimalistic store. All products, posts and data for the map popups have been placed in the local DB (json) and rendered on the site with XMLHttpRequest. Designed by Hogash.</p>
+<p>This is multi-page website for a minimalistic store. All products, posts and data for the map popups have been placed in the local DB (json) and rendered on the site using Fetch API. Designed by Hogash.</p>
 
 <h2>List of improvements:</h2>
 <ul>
