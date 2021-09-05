@@ -290,3 +290,30 @@ main {
     padding: 0.5em;
     color: #888;
 }
+
+
+/// 404
+.error {
+    font-family: $ms;
+    text-align: center;
+    &-title {
+        font-size: 18px;
+        margin: 15px 0;
+        color: $red;
+    }
+    &-return {
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        @include flexCenter;
+        i {
+            font-size: 24px;
+            margin-right: 10px;
+            transition: $animated;
+        }
+        &:hover i{
+            margin-right: 15px;
+        }
+    }
+}

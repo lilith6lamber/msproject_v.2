@@ -324,8 +324,8 @@ function userLogin() {
     });
 
     document.body.addEventListener('click', e => {
-        e.preventDefault();
         if (e.target.matches('.popup_login-form_submit')) {
+            e.preventDefault();
             sendLoginRequest();
         }
     });

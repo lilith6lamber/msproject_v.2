@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"4 0 4"})
+<body>
+    @@include('components/_nav.html')
+    <main class="error">
+        <div class="container d-flex flex-column align-items-center">
+            <img src="img/404.gif" alt="404" class="error-img">
+            <h1 class="error-title">Oops! Something went wrong.</h1>
+            <p class="error-subtitle">Page not found.</p>
+            <a href="javascript:window.history.go(-1);" class="error-return">
+                <i class="icon-angle-left"></i>
+                Return to the previous page
+            </a>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+</html>
