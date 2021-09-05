@@ -10,6 +10,9 @@ body {
 body {
     background: $body;
     color: $text;
+    &.swal2-shown {
+        padding: 0 !important;
+    }
 }
 
 a,

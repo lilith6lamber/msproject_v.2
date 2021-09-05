@@ -88,7 +88,8 @@ function drawSlider() {
             navContainer: '.single_slider-thumbnails',
             navAsThumbnails: true,
             controlsContainer: '.single_slider-controls',
-            ...sliderDefaults
+            ...sliderDefaults,
+            autoplay: false
         });
     }
 
@@ -286,34 +287,78 @@ function scrollNav() {
 }
 
 function userLogin() {
-    let animate = 'wow';
-    const loginLink = document.getElementById('loginlink');
-
-    loginLink.addEventListener('click', () => {
-        Swal.fire({
-            title: 'Log in',
-            customClass: {
-                title: 'popup_login-title',
-            },
-            showConfirmButton: false,
-            showClass: {
-                popup: animate + 'fadeIn',
-                backdrop: animate + 'fadeIn swal2-backdrop-show'
-            },
-            hideClass: {
-                popup: animate + 'fadeOut',
-                backdrop: animate + 'fadeOut swal2-backdrop-show'
-            },
-            html: `
+    let animate = 'animated fade';
+    const swalConfig = {
+        title: 'Log in',
+        customClass: {
+            title: 'popup_login-title',
+            popup: 'popup_login'
+        },
+        showConfirmButton: false,
+        showCloseButton: false,
+        confirmButtonText: 'Submit',
+        showClass: {
+            popup: animate + 'In',
+            backdrop: animate + 'In swal2-backdrop-show'
+        },
+        hideClass: {
+            popup: animate + 'Out',
+            backdrop: animate + 'Out swal2-backdrop-show'
+        },
+        html: `
                 <form method="POST" id="popup_login-form" class="popup_login-form">
                     <input id="popup_login-form_email" type="email" class="popup_login-form_email" placeholder="Email">
                     <input id="popup_login-form_password" type="password" class="popup_login-form_password" placeholder="Password">
-                    <button id="popup_login-form_submit" type="submit" class="popup_login-form_submit">Submit</button>
+                    <p class="popup_login-form_error">Your email/password is incorrect. Check your data and try again.</p>
+                    <button class="popup_login-form_submit">Submit</button>
                 </form>
-            `
+                <a class="password_reminder" href="javascript:void(0)">Forgot your password?</a>
+                `};
+
+
+    const triggerLoginModal = document.querySelectorAll('.triggerLoginModal');
+    triggerLoginModal.forEach(el => {
+        el.addEventListener('click', () => {
+            Swal.fire(swalConfig);
         });
     });
 
+    document.body.addEventListener('click', e => {
+        e.preventDefault();
+        if (e.target.matches('.popup_login-form_submit')) {
+            sendLoginRequest();
+        }
+    });
+}
+
+function sendLoginRequest() {
+    const emailInput = document.getElementById('popup_login-form_email'),
+        passwordInput = document.getElementById('popup_login-form_password');
+    
+    const validationErr = document.querySelector('.popup_login-form_error');
+    
+    let request = new Promise((resolve, reject) => {
+        resolve({
+            email: emailInput.value,
+            password: passwordInput.value
+        });
+    }).then(async function (data) {
+        let response = await fetch('data/data.json');
+        if (response.ok) {
+            let json = await response.json();
+            for (let i = 0; i < json.users.length; i++) {
+                let userEmail = json.users[i].email;
+                let userPassword = json.users[i].password;
+
+                if (userEmail === data.email && userPassword === data.password) {
+                    Swal.close();
+                    break;
+                } else {
+                    validationErr.style.display = 'block';
+                }
+            }
+        }
+    })
 }
 
 

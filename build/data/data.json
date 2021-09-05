@@ -395,8 +395,14 @@
     ],
     "users": [
         {
-            "email": "exapmle@gmail.com",
-            "password": "qwe123"
+            "email": "example@gmail.com",
+            "password": "qwe123",
+            "access": "customer"
+        },
+        {
+            "email": "admin@gmail.com",
+            "password": "admin",
+            "access": "admin"
         }
     ]
 }
