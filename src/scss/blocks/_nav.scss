@@ -196,7 +196,7 @@
 
 @media (min-width: 767.98px) {
     .navbar {
-        &_conatiner {
+        &_container {
             padding: 0 30px;
         }
         &.sticky + main {
@@ -215,7 +215,7 @@
         }
         &.sticky + .promo,
         &.sticky + header {
-            margin-top: 95px;
+            margin-top: 94px;
         }
         &.sticky + main {
             margin-top: 120px !important;
