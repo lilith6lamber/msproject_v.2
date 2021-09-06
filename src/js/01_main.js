@@ -14,6 +14,7 @@ document.body.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
 
     changeElemsOnAuth();
+    checkStatus();
 
     let lazyLoadInstance = new LazyLoad({});
     customSelect('select');
@@ -336,9 +337,9 @@ function sendLoginRequest() {
     const emailInput = document.getElementById('popup_login-form_email'),
         passwordInput = document.getElementById('popup_login-form_password'),
         checkbox = document.getElementById('remember');
-    
+
     const validationErr = document.querySelector('.popup_login-form_error');
-    
+
     let request = new Promise((resolve, reject) => {
         resolve({
             email: emailInput.value,
@@ -371,7 +372,7 @@ function sendLoginRequest() {
                     Swal.close();
                     changeElemsOnAuth();
                     break;
-                } else if (userEmail !== data.email || userPassword !== data.password){
+                } else if (userEmail !== data.email || userPassword !== data.password) {
                     validationErr.style.display = 'block';
                 }
             }
@@ -393,20 +394,85 @@ function changeElemsOnAuth() {
                 <a id="joinlink" href="join.html">Join</a>
                 `,
         isLogged = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+
+    const reviewWarning = document.querySelector('#reviews .warning'),
+        reviewsList = document.querySelector('#reviews-list');
+    let formHTML = `
+                    <form action="POST" class="d-flex flex-wrap review-form">
+                        <label class="review-form_label" for="reviewName">Your name</label>
+                        <input class="review-form_input" type="text" name="reviewName" id="reviewName">
+                        <label class="review-form_label" for="reviewText">Your review</label>
+                        <textarea class="review-form_input" name="reviewText" id="reviewText" cols="30" rows="10"></textarea>
+                        <button class="review-form_btn" type="submit">Send</button>
+                    </form>
+        `;
+
     if (isLogged === 'admin') {
         navbarUserLinks.innerHTML = `
         <a href="admin.html">Orders</a> / 
         <a class="logout" href="javascript:void(0)">Logout</a>`;
+        reviewWarning.style.display = 'none';
     } else if (isLogged === 'user') {
         navbarUserLinks.innerHTML = `
-        <a href="profile.html">My Account</a> /
+        <a href="profile.html">Account</a> /
         <a class="logout" href="javascript:void(0)">Logout</a>
         `;
+        if (reviewWarning && reviewsList) {
+            reviewWarning.style.display = 'none';
+            reviewsList.insertAdjacentHTML('afterend', formHTML);
+        }
     }
     else {
         navbarUserLinks.innerHTML = navbarDefaultHTML;
+        reviewWarning.style.display = 'block';
+        formHTML = '';
     }
 }
+
+function checkStatus() {
+    const orderPayment = document.querySelectorAll('.orderPayment'),
+        orderStatus = document.querySelectorAll('.orderStatus');
+    
+    const stage01 = '#0060ff',
+        stage02 = '#f5c002',
+        stage03 = '#358521';
+    
+    if (orderPayment && orderStatus) {
+        orderPayment.forEach(el => {
+            switch (el.innerText) {
+                case 'n/r':
+                    el.style.color = stage01;
+                    break;
+                case 'processing':
+                    el.style.color = stage02;
+                    break;
+                case 'received':
+                    el.style.color = stage03;
+                    break;
+                default:
+                    el.style.color = '#262626';
+            }
+        });
+    
+        orderStatus.forEach(el => {
+            switch (el.innerText) {
+                case 'new':
+                    el.style.color = stage01;
+                    break;
+                case 'processing':
+                    el.style.color = stage02;
+                    break;
+                case 'complete':
+                    el.style.color = stage03;
+                    break;
+                default:
+                    el.style.color = '#262626';
+            }
+        });
+    }
+    
+}
+
 
 
 function triggerSecondForm() {

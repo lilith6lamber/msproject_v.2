@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"A C C O U N T"})
+
+<body>
+    @@include('components/_nav.html')
+    <main class="profile">
+        <div class="container profile_container d-flex flex-wrap">
+            <h1 class="profile_title col-12">Hello, <span class="profile_title-username">Jane</span>!</h1>
+            <section class="profile_orders col-12">
+                <h2 class="profile_orders-title">Your orders</h2>
+                <table class="profile_orders-table">
+                    <thead>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="orderID">#76854</td>
+                            <td class="orderDate">09/06/21</td>
+                            <td class="orderPayment">processing</td>
+                            <td class="orderStatus">new</td>
+                        </tr>
+                        <tr>
+                            <td class="orderID">#71598</td>
+                            <td class="orderDate">04/24/21</td>
+                            <td class="orderPayment">received</td>
+                            <td class="orderStatus">complete</td>
+                        </tr>
+                        <tr>
+                            <td class="orderID">#72098</td>
+                            <td class="orderDate">12/28/20</td>
+                            <td class="orderPayment">received</td>
+                            <td class="orderStatus">complete</td>
+                        </tr>
+                        <tr>
+                            <td class="orderID">#74127</td>
+                            <td class="orderDate">12/02/20</td>
+                            <td class="orderPayment">received</td>
+                            <td class="orderStatus">complete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="profile_favorites col-12 col-lg-6">
+                <h2 class="profile_favorites-title">Your favorites</h2>
+            </section>
+            <section class="profile_info col-12 col-lg-6">
+                <h2 class="profile_info-title">Account</h2>
+                <form action="POST" class="profile_info-form form_type_8 d-flex flex-wrap">
+                    <div class="field">
+                        <label for="new_name">First name</label>
+                        <input id="new_name" type="text" name="firstname" readonly value="Jane">
+                    </div>
+                    <div class="field">
+                        <label for="new_lastname">Last name</label>
+                        <input id="new_lastname" type="text" name="lastname" readonly value="Doe">
+                    </div>
+                    <div class="field">
+                        <label for="new_city">Email</label>
+                        <input id="new_city" type="email" name="city" readonly value="example@gmail.com">
+                    </div>
+                    <div class="field">
+                        <label for="new_country">Password</label>
+                        <input id="new_country" type="password" name="country" readonly value="qwe123">
+                    </div>
+                    <div class="field">
+                        <label for="new_name">Phone number</label>
+                        <input id="new_name" type="text" name="firstname" required readonly value="+1234567890">
+                    </div>
+                    <div class="field">
+                        <label for="new_lastname">ZIP</label>
+                        <input id="new_lastname" type="text" name="lastname" readonly value="10025">
+                    </div>
+                    <div class="field">
+                        <label for="new_city">City</label>
+                        <input id="new_city" type="text" name="city" readonly value="New York">
+                    </div>
+                    <div class="field">
+                        <label for="new_country">Country</label>
+                        <input id="new_country" type="text" name="country" readonly value="USA">
+                    </div>
+                    <div class="field">
+                        <label for="new_city">Address</label>
+                        <input id="new_city" type="text" name="city" readonly value="76 W 105th St.">
+                    </div>
+                    <div class="field">
+                        <label for="shipping">Shipping</label>
+                        <select name="shipping" id="shipping">
+                            <option value="delivery">Delivery Co.</option>
+                            <option value="usapost">USA Post</option>
+                            <option value="courier">Our courier</option>
+                        </select>
+                    </div>
+                    <button style="width:100%">Edit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    @@include('components/_footer.html')
+</body>
+
+</html>

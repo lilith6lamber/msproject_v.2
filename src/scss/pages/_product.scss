@@ -6,6 +6,35 @@
     align-items: center;
 }
 
+.review-form {
+    margin: 30px 0;
+    &_input,
+    &_label,
+    &_btn {
+        min-width: 100%;
+    }
+    &_input {
+        font-size: 14px;
+        font-weight: normal;
+        border: 1px solid $foonav;
+        font-family: $ms;
+        margin: 10px 0;
+        padding: 5px 15px;
+
+        &:focus {
+            border-left: 5px solid $field;
+            padding: 5px 11px;
+        }
+    }
+    &_label {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    &_btn {
+        @include btnSolid($text);
+    }
+}
+
 .single {
     margin: 20px 15px 0;
     padding: 15px;
@@ -223,6 +252,11 @@
 @media (min-width: 575.98px) {
     .slider-wrapper {
         width: 50%;
+    }
+    .review-form_btn {
+        min-width: unset;
+        max-width: 150px;
+        margin-right: 0;
     }
     .single {
         &_info {

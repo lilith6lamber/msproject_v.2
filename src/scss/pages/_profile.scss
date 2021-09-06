@@ -1,0 +1,36 @@
+.profile {
+    font-family: $ms;
+    &_container {
+        max-width: 1000px;
+    }
+    section h2, h1 {
+        text-align: center; 
+    }
+    section h2 {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    &_title { 
+        font-size: 18px;
+        font-family: $ig;
+        margin-bottom: 30px;
+        &-username {
+            color: $red;
+        }
+    }
+    &_orders {
+        &-table {
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            tbody td {
+                border: 1px solid $gray;
+                padding: 2px;
+            }
+        }
+    }
+}

@@ -397,7 +397,8 @@
         {
             "email": "example@gmail.com",
             "password": "qwe123",
-            "access": "customer"
+            "access": "customer",
+            "name": "Jane"
         },
         {
             "email": "admin@gmail.com",
