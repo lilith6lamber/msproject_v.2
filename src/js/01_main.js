@@ -1,17 +1,19 @@
 "use strict";
 
-const showBtn = document.querySelector('.collection-btn');
-
-if (showBtn) {
-    showBtn.onclick = showMore;
-}
-
 let itemsToShow = 12,
     totalItems = 0;
+
+document.body.addEventListener('click', (e) => {
+    if (e.target.matches('.collection-btn')) {
+        showMore();
+        e.target.classList.add('hidden');
+    }
+})
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    changeElemsOnAuth();
 
     let lazyLoadInstance = new LazyLoad({});
     customSelect('select');
@@ -310,37 +312,38 @@ function userLogin() {
                     <input id="popup_login-form_email" type="email" class="popup_login-form_email" placeholder="Email">
                     <input id="popup_login-form_password" type="password" class="popup_login-form_password" placeholder="Password">
                     <p class="popup_login-form_error">Your email/password is incorrect. Check your data and try again.</p>
+                    <div class="popup_login-form_field">
+                        <input id="remember" type="checkbox" name="remember" checked>
+                        <label for="remember">Keep me logged in</label>
+                    </div>
                     <button class="popup_login-form_submit">Submit</button>
                 </form>
                 <a class="password_reminder" href="javascript:void(0)">Forgot your password?</a>
                 `};
-
-
-    const triggerLoginModal = document.querySelectorAll('.triggerLoginModal');
-    triggerLoginModal.forEach(el => {
-        el.addEventListener('click', () => {
-            Swal.fire(swalConfig);
-        });
-    });
 
     document.body.addEventListener('click', e => {
         if (e.target.matches('.popup_login-form_submit')) {
             e.preventDefault();
             sendLoginRequest();
         }
+        if (e.target.matches('.triggerLoginModal')) {
+            Swal.fire(swalConfig);
+        }
     });
 }
 
 function sendLoginRequest() {
     const emailInput = document.getElementById('popup_login-form_email'),
-        passwordInput = document.getElementById('popup_login-form_password');
+        passwordInput = document.getElementById('popup_login-form_password'),
+        checkbox = document.getElementById('remember');
     
     const validationErr = document.querySelector('.popup_login-form_error');
     
     let request = new Promise((resolve, reject) => {
         resolve({
             email: emailInput.value,
-            password: passwordInput.value
+            password: passwordInput.value,
+            checkbox: checkbox
         });
     }).then(async function (data) {
         let response = await fetch('data/data.json');
@@ -351,14 +354,58 @@ function sendLoginRequest() {
                 let userPassword = json.users[i].password;
 
                 if (userEmail === data.email && userPassword === data.password) {
+                    if (json.users[i].access === 'customer') {
+                        if (data.checkbox.checked) {
+                            localStorage.setItem('auth', 'user');
+                        } else {
+                            sessionStorage.setItem('auth', 'user');
+                        }
+                    } else if (json.users[i].access === 'admin') {
+                        if (data.checkbox.checked) {
+                            localStorage.setItem('auth', 'admin');
+                        } else {
+                            sessionStorage.setItem('auth', 'admin');
+                        }
+                    }
+                    validationErr.style.display = 'none';
                     Swal.close();
+                    changeElemsOnAuth();
                     break;
-                } else {
+                } else if (userEmail !== data.email || userPassword !== data.password){
                     validationErr.style.display = 'block';
                 }
             }
         }
     })
+}
+
+document.body.addEventListener('click', (e) => {
+    if (e.target.matches('.logout')) {
+        localStorage.removeItem('auth') || sessionStorage.removeItem('auth');
+        changeElemsOnAuth();
+    }
+});
+
+function changeElemsOnAuth() {
+    const navbarUserLinks = document.querySelector('.navbar_user-account'),
+        navbarDefaultHTML = `
+                <a class="triggerLoginModal" id="loginlink" href="javascript:void(0)">Login</a> /
+                <a id="joinlink" href="join.html">Join</a>
+                `,
+        isLogged = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+    if (isLogged === 'admin') {
+        navbarUserLinks.innerHTML = `
+        <a href="admin.html">Orders</a> / 
+        <a class="logout" href="javascript:void(0)">Logout</a>`;
+    } else if (isLogged === 'user') {
+        navbarUserLinks.innerHTML = `
+        <a href="profile.html">My Account</a> /
+        <a class="logout" href="javascript:void(0)">Logout</a>
+        `;
+    }
+    else {
+        navbarUserLinks.innerHTML = navbarDefaultHTML;
+    }
 }
 
 
@@ -456,7 +503,7 @@ function drawHTML(img, title, lorem, id, category) {
     lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aliquid provident
     quas optio dolor quaerat.`;
     let html = `
-    <li class="wow fadeInUp blog_posts-post mix ${category} col-12 col-sm-6 col-lg-4 col-xl-3">
+    <li class="animated fadeInUp blog_posts-post mix ${category} col-12 col-sm-6 col-lg-4 col-xl-3">
         <div class="blog_posts-post_img">
             <picture>
                 <source type="image/webp" srcset="img/blog/${img}.webp">

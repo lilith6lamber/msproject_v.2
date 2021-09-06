@@ -158,6 +158,10 @@ input[type="checkbox"] {
                 max-width: 300px;
                 margin: 0 auto;
             }
+            &_field {
+                font-family: $ms;
+                font-size: 12px;
+            }
         }
         .password_reminder {
             @include ms_semibold;
