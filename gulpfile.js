@@ -8,8 +8,7 @@ exports.database = tasks.database;
 exports.fonts = tasks.fonts;
 exports.style = tasks.style;
 exports.build_js = tasks.build_js;
-exports.libs_js = tasks.libs_js;
-exports.dev_js = tasks.dev_js;
+exports.modules = tasks.modules;
 exports.html = tasks.html;
 exports.php = tasks.php;
 exports.rastr = tasks.rastr;
@@ -29,8 +28,7 @@ exports.default = gulp.parallel(
   exports.ttf2,
   exports.fonts,
   exports.style,
-  exports.libs_js,
-  exports.dev_js,
+  exports.modules,
   exports.rastr,
   exports.webp,
   exports.html,
@@ -45,8 +43,7 @@ exports.dev_php = gulp.parallel(
   exports.database,
   exports.fonts,
   exports.style,
-  exports.libs_js,
-  exports.dev_js,
+  exports.modules,
   exports.rastr,
   exports.webp,
   exports.php,

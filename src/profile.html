@@ -90,18 +90,19 @@
                     </div>
                     <div class="field">
                         <label for="shipping">Shipping</label>
-                        <select name="shipping" id="shipping">
+                        <select name="shipping" id="shipping" required>
                             <option value="delivery">Delivery Co.</option>
                             <option value="usapost">USA Post</option>
                             <option value="courier">Our courier</option>
                         </select>
                     </div>
-                    <button style="width:100%">Edit</button>
+                    <button class="triggerChange" style="width:100%">Edit</button>
                 </form>
             </section>
         </div>
     </main>
     @@include('components/_footer.html')
+    <script src="js/user.js"></script>
 </body>
 
 </html>
