@@ -9,7 +9,7 @@
     <li>No more PUG. I've used gulp-file-include instead of it.</li>
     <li>All images have been replaced with a better quality ones.</li>
     <li>Markup overhaul. All pages have the same logic of the class naming so markup is more readable now.</li>
-    <li>Better working Gulp build.</li>
+    <li>Better working Gulp + Webpack build.</li>
     <li>Responsive behavior.</li>
 </ul>
 
