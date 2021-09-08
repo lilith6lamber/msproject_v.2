@@ -16,7 +16,7 @@
 <h2>TODO:</h2>
 <ol>
     <li>Form validation</li>
-    <li>User cabinet</li>
+    <li>User account</li>
     <li>Admin panel</li>
     <li>Cart and checkout functionality</li>
 </ol>
