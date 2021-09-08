@@ -4,13 +4,20 @@ const {
 } = require('gulp');
 
 const webpack = require('webpack-stream');
-const bs = require('browser-sync');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = function modules() {
     return src('src/js/entry.js')
         .pipe(webpack({
             watch: true,
             mode: 'development',
+            plugins: [
+                new BrowserSyncPlugin({
+                    host: 'localhost',
+                    port: 3000,
+                    server: { baseDir: ['build'] }
+                })
+            ],
             entry: {
                 common: './src/js/common.js',
                 user: './src/js/user.js',
@@ -25,5 +32,4 @@ module.exports = function modules() {
             },
         }))
         .pipe(dest('build/js'))
-        .pipe(bs.stream());
 }
