@@ -1,5 +1,22 @@
+#loadingScreen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: ghostwhite;
+    z-index: 100000;
+    @include flexCenter;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 html {
     scroll-behavior: smooth;
+    position: relative;
 }
 
 html,
@@ -10,24 +27,12 @@ body {
 body {
     background: $body;
     color: $text;
-    position: relative;
+    visibility: hidden;
     &.swal2-shown {
         padding: 0 !important;
     }
-    #loadingScreen {
-        position: absolute;
-        width: 100vw;
-        height: 100vh; 
-        background: ghostwhite;
-        z-index: 100000;
-        @include flexCenter; 
-        transition: .2s; 
-        visibility: hidden;
-        opacity: 0;
-        &.visible {
-            visibility: visible; 
-            opacity: 1;
-        } 
+    &.visible {
+        visibility: visible;
     }
 }
 
