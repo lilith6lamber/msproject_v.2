@@ -9,7 +9,24 @@ import tabs from "./modules/tabs";
 import { userLogin, logout, changeElemsOnAuth } from "./modules/auth";
 import { toggleForm } from "./modules/form";
 
+
+const setVisible = (selector, visible) => {
+    selector = document.getElementById(selector);
+    if (visible) {
+        selector.classList.add("visible");
+        document.documentElement.style.overflowY = 'hidden';
+    } else {
+        selector.classList.remove("visible");
+        document.documentElement.style.overflowY = 'visible';
+    }
+}
+
+setVisible('loadingScreen', true);
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    setTimeout(setVisible, 1000, 'loadingScreen', false);
+
     let lazyLoadInstance = new LazyLoad({});
     changeElemsOnAuth();
     userLogin();
@@ -31,5 +48,3 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleForm('checkout_form');
     }
 });
-
-
