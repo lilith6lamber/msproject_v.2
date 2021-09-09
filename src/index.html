@@ -14,7 +14,7 @@
                         <picture>
                             <source type="image/webp" srcset="img/products/1.webp">
                             <source type="image/jpeg" srcset="img/products/1.jpg">
-                            <img src="img/products/1.jpg" alt="Voyageur Brooklyn Backpack">
+                            <img data-src="img/products/1.jpg" alt="Voyageur Brooklyn Backpack" class="tns-lazy">
                         </picture>
                     </div>
                     <div class="promo_slider-slide_text col-12 col-sm-6 col-md-5 col-xxl-4">
@@ -28,7 +28,7 @@
                         <picture>
                             <source type="image/webp" srcset="img/products/2.webp">
                             <source type="image/jpeg" srcset="img/products/2.jpg">
-                            <img src="img/products/2.jpg" alt="Nike Air Max 270 React SP">
+                            <img data-src="img/products/2.jpg" alt="Nike Air Max ZM950" class="tns-lazy">
                         </picture>
                     </div>
                     <div class="promo_slider-slide_text col-12 col-sm-6 col-md-5 col-xxl-4">
@@ -42,7 +42,7 @@
                         <picture>
                             <source type="image/webp" srcset="img/products/3.webp">
                             <source type="image/jpeg" srcset="img/products/3.jpg">
-                            <img src="img/products/3.jpg" alt="Loft Chair">
+                            <img data-src="img/products/3.jpg" alt="Loft Chair" class="tns-lazy">
                         </picture>
                     </div>
                     <div class="promo_slider-slide_text col-12 col-sm-6 col-md-5 col-xxl-4">
@@ -67,60 +67,164 @@
             <h2 class="gallery_title title">Lookbook</h2>
             <div class="container">
                 <div class="gallery_lookbook" id="gallery_lookbook">
-                    <a href="img/gallery/look1.jpg">
+                    <a href="img/gallery/look1.jpg"
+                        data-at-579="img/gallery/look1_mobile.jpg"
+                        data-at-992="img/gallery/look1_tablet.jpg"
+                        data-at-1200="img/gallery/look1_desktop.jpg"
+                        data-at-1400="img/gallery/look1.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look1pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look1pw.jpg">
-                            <img src="img/gallery/look1pw.jpg" alt="lookbook">
+                            <source type="image/webp" 
+                                    data-srcset="img/gallery/look1pw_mobile.webp 579w,
+                                            img/gallery/look1pw_tablet.webp 992w,
+                                            img/gallery/look1pw_desktop.webp 1200w,
+                                            img/gallery/look1pw.webp 1400w"
+                                    data-sizes="100w">
+                            <img data-src="img/gallery/look1pw.jpg"
+                                data-srcset="img/gallery/look1pw_mobile.jpg 579w,
+                                            img/gallery/look1pw_tablet.jpg 992w,
+                                            img/gallery/look1pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look2.jpg">
+                    <a href="img/gallery/look2.jpg"
+                        data-at-579="img/gallery/look2_mobile.jpg"
+                        data-at-992="img/gallery/look2_tablet.jpg"
+                        data-at-1200="img/gallery/look2_desktop.jpg"
+                        data-at-1400="img/gallery/look2.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look2pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look2pw.jpg">
-                            <img src="img/gallery/look2pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                    data-srcset="img/gallery/look2pw_mobile.webp 579w,
+                                            img/gallery/look2pw_tablet.webp 992w,
+                                            img/gallery/look2pw_desktop.webp 1200w,
+                                            img/gallery/look2pw.webp 1400w"
+                                    data-sizes="100w">
+                            <img data-src="img/gallery/look2pw.jpg"
+                                data-srcset="img/gallery/look2pw_mobile.jpg 579w,
+                                            img/gallery/look2pw_tablet.jpg 992w,
+                                            img/gallery/look2pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look3.jpg">
+                    <a href="img/gallery/look3.jpg"
+                        data-at-579="img/gallery/look3_mobile.jpg"
+                        data-at-992="img/gallery/look3_tablet.jpg"
+                        data-at-1200="img/gallery/look3_desktop.jpg"
+                        data-at-1400="img/gallery/look3.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look3pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look3pw.jpg">
-                            <img src="img/gallery/look3pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                    data-srcset="img/gallery/look3pw_mobile.webp 579w,
+                                            img/gallery/look3pw_tablet.webp 992w,
+                                            img/gallery/look3pw_desktop.webp 1200w,
+                                            img/gallery/look3pw.webp 1400w"
+                                    data-sizes="100w">
+                            <img data-src="img/gallery/look3pw.jpg"
+                                data-srcset="img/gallery/look3pw_mobile.jpg 579w,
+                                            img/gallery/look3pw_tablet.jpg 992w,
+                                            img/gallery/look3pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look4.jpg">
+                    <a href="img/gallery/look4.jpg"
+                        data-at-579="img/gallery/look4_mobile.jpg"
+                        data-at-992="img/gallery/look4_tablet.jpg"
+                        data-at-1200="img/gallery/look4_desktop.jpg"
+                        data-at-1400="img/gallery/look4.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look4pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look4pw.jpg">
-                            <img src="img/gallery/look4pw.jpg" alt="lookbook">
+                            <source type="image/webp" 
+                                data-srcset="img/gallery/look4pw_mobile.webp 579w,
+                                            img/gallery/look4pw_tablet.webp 992w,
+                                            img/gallery/look4pw_desktop.webp 1200w,
+                                            img/gallery/look4pw.webp 1400w"
+                                data-sizes="100w">
+                            <img data-src="img/gallery/look4pw.jpg"
+                                data-srcset="img/gallery/look4pw_mobile.jpg 579w,
+                                            img/gallery/look4pw_tablet.jpg 992w,
+                                            img/gallery/look4pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look5.jpg">
+                    <a href="img/gallery/look5.jpg"
+                        data-at-579="img/gallery/look5_mobile.jpg"
+                        data-at-992="img/gallery/look5_tablet.jpg"
+                        data-at-1200="img/gallery/look5_desktop.jpg"
+                        data-at-1400="img/gallery/look5.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look5pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look5pw.jpg">
-                            <img src="img/gallery/look5pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                data-srcset="img/gallery/look5pw_mobile.webp 579w,
+                                            img/gallery/look5pw_tablet.webp 992w,
+                                            img/gallery/look5pw_desktop.webp 1200w,
+                                            img/gallery/look5pw.webp 1400w"
+                                data-sizes="100w">
+                            <img data-src="img/gallery/look5pw.jpg" 
+                                data-srcset="img/gallery/look5pw_mobile.jpg 579w,
+                                            img/gallery/look5pw_tablet.jpg 992w,
+                                            img/gallery/look5pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look6.jpg">
+                    <a href="img/gallery/look6.jpg"
+                        data-at-579="img/gallery/look6_mobile.jpg"
+                        data-at-992="img/gallery/look6_tablet.jpg"
+                        data-at-1200="img/gallery/look6_desktop.jpg"
+                        data-at-1400="img/gallery/look6.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look6pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look6pw.jpg">
-                            <img src="img/gallery/look6pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                data-srcset="img/gallery/look6pw_mobile.webp 579w,
+                                            img/gallery/look6pw_tablet.webp 992w,
+                                            img/gallery/look6pw_desktop.webp 1200w,
+                                            img/gallery/look6pw.webp 1400w"
+                                data-sizes="100w">
+                            <img data-src="img/gallery/look6pw.jpg" 
+                                data-srcset="img/gallery/look6pw_mobile.jpg 579w,
+                                            img/gallery/look6pw_tablet.jpg 992w,
+                                            img/gallery/look6pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look7.jpg">
+                    <a href="img/gallery/look7.jpg"
+                        data-at-579="img/gallery/look7_mobile.jpg"
+                        data-at-992="img/gallery/look7_tablet.jpg"
+                        data-at-1200="img/gallery/look7_desktop.jpg"
+                        data-at-1400="img/gallery/look7.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look7pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look7pw.jpg">
-                            <img src="img/gallery/look7pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                data-srcset="img/gallery/look7pw_mobile.webp 579w,
+                                            img/gallery/look7pw_tablet.webp 992w,
+                                            img/gallery/look7pw_desktop.webp 1200w,
+                                            img/gallery/look7pw.webp 1400w"
+                                data-sizes="100w">
+                            <img data-src="img/gallery/look7pw.jpg" 
+                                data-srcset="img/gallery/look7pw_mobile.jpg 579w,
+                                            img/gallery/look7pw_tablet.jpg 992w,
+                                            img/gallery/look7pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
-                    <a href="img/gallery/look8.jpg">
+                    <a href="img/gallery/look8.jpg"
+                        data-at-579="img/gallery/look8_mobile.jpg"
+                        data-at-992="img/gallery/look8_tablet.jpg"
+                        data-at-1200="img/gallery/look8_desktop.jpg"
+                        data-at-1400="img/gallery/look8.jpg">
                         <picture>
-                            <source type="image/webp" srcset="img/gallery/look8pw.webp">
-                            <source type="image/jpeg" srcset="img/gallery/look8pw.jpg">
-                            <img src="img/gallery/look8pw.jpg" alt="lookbook">
+                            <source type="image/webp"
+                                data-srcset="img/gallery/look8pw_mobile.webp 579w,
+                                            img/gallery/look8pw_tablet.webp 992w,
+                                            img/gallery/look8pw_desktop.webp 1200w,
+                                            img/gallery/look8pw.webp 1400w"
+                                data-sizes="100w">
+                            <img data-src="img/gallery/look8pw.jpg" 
+                                data-srcset="img/gallery/look8pw_mobile.jpg 579w,
+                                            img/gallery/look8pw_tablet.jpg 992w,
+                                            img/gallery/look8pw_desktop.jpg 1200w"
+                                data-sizes="100w"
+                                alt="lookbook" class="lazy">
                         </picture>
                     </a>
                 </div>
@@ -144,7 +248,7 @@
                                 <picture>
                                     <source type="image/webp" srcset="img/shopimg1.webp">
                                     <source type="image/jpeg" srcset="img/shopimg1.jpg">
-                                    <img src="img/shopimg1.jpg" alt="shop">
+                                    <img data-src="img/shopimg1.jpg" alt="shop" class="tns-lazy">
                                 </picture>
                             </div>
                             <div class="location_slider-slide_info col-12">
@@ -161,7 +265,7 @@
                                 <picture>
                                     <source type="image/webp" srcset="img/shopimg2.webp">
                                     <source type="image/jpeg" srcset="img/shopimg2.jpg">
-                                    <img src="img/shopimg2.jpg" alt="shop">
+                                    <img data-src="img/shopimg2.jpg" alt="shop" class="tns-lazy">
                                 </picture>
                             </div>
                             <div class="location_slider-slide_info col-12">
@@ -178,7 +282,7 @@
                                 <picture>
                                     <source type="image/webp" srcset="img/shopimg3.webp">
                                     <source type="image/jpeg" srcset="img/shopimg3.jpg">
-                                    <img src="img/shopimg3.jpg" alt="shop">
+                                    <img data-src="img/shopimg3.jpg" alt="shop" class="tns-lazy">
                                 </picture>
                             </div>
                             <div class="location_slider-slide_info col-12">

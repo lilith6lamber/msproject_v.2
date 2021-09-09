@@ -26,7 +26,7 @@ export function drawProdHTML(li, img, item, price, category, color) {
             <picture>
                 <source type="image/webp" srcset="img/products/${img}.webp">
                 <source type="image/jpeg" srcset="img/products/${img}.jpg">
-                <img class="${li}_img" src="img/products/${img}.jpg" alt="${item}">
+                <img class="${li}_img lazy" data-src="img/products/${img}.jpg" alt="${item}">
             </picture>
             <div class="${li}_info">
                 <span class="name">${item}</span>

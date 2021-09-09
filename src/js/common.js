@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () =>
 
 document.addEventListener("DOMContentLoaded", () => {
 
-/*     setTimeout(setVisible, 1000, 'loadingScreen', false); */
-
     let lazyLoadInstance = new LazyLoad({});
     changeElemsOnAuth();
     userLogin();

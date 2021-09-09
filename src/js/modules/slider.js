@@ -9,7 +9,9 @@ function slider() {
         autoplayButtonOutput: false,
         arrowKeys: true,
         autoplay: true,
-        mode: 'gallery'
+        mode: 'gallery',
+        lazyload: true,
+        lazyloadSelector: '.tns-lazy'
     };
 
     const promoSliderEl = document.querySelector('.promo_slider');
