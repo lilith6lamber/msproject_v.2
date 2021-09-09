@@ -7,6 +7,8 @@ import 'leaflet.fullscreen/Control.Fullscreen';
 import 'leaflet.locatecontrol';
 import 'leaflet.markercluster';
 
+import axios from "axios";
+
 window.screenfull = screenfull;
 
 async function drawMap() {
@@ -46,10 +48,9 @@ async function drawMap() {
         disableClusteringAtZoom: 16
     });
 
-
-    let response = await fetch('data/data.json');
-    if (response.ok) {
-        let json = await response.json();
+    try {
+        const response = await axios.get('data/data.json');
+        let json = response.data;
         for (let i = 0; i < json.stores.length; i++) {
             let popupData =
                 `<div class="popup_general">
@@ -71,8 +72,9 @@ async function drawMap() {
             )
         }
         map.addLayer(markers);
-    } else {
-        console.log("HTTP Error: " + response.status);
+    }
+    catch (error) {
+        console.log(error);
     }
 }
 

@@ -6,7 +6,8 @@ import mixitup from 'mixitup';
 import {drawBlogHTML} from './html';
 import { setPostData } from './setters';
 import { drawProdHTML } from './html';
-//import changeElemsOnAuth from './auth';
+
+import axios from "axios";
 
 export function sendLoginRequest() {
     const emailInput = document.getElementById('popup_login-form_email'),
@@ -22,9 +23,9 @@ export function sendLoginRequest() {
             checkbox: checkbox
         });
     }).then(async function (data) {
-        let response = await fetch('data/data.json');
-        if (response.ok) {
-            let json = await response.json();
+        try {
+            const response = await axios.get('data/data.json');
+            let json = response.data;
             for (let i = 0; i < json.users.length; i++) {
                 let userEmail = json.users[i].email;
                 let userPassword = json.users[i].password;
@@ -52,13 +53,16 @@ export function sendLoginRequest() {
                 }
             }
         }
+        catch(error) {
+            console.log(error);
+        }
     })
 }
 
 export async function getPosts(containerEl) {
-    let response = await fetch('data/data.json');
-    if (response.ok) {
-        let json = await response.json();
+    try {
+        const response = await axios.get('data/data.json');
+        let json = response.data;
         let html = '';
         for (let i = 0; i < json.posts.length; i++) {
             let img = json.posts[i].img,
@@ -80,8 +84,8 @@ export async function getPosts(containerEl) {
             }
         });
     }
-    else {
-        console.log("HTTP Error: " + response.status);
+    catch (error) {
+        console.log(error);
     }
 }
 
@@ -95,9 +99,9 @@ export function showMore() {
 }
 
 export async function getProducts() {
-    let response = await fetch('data/data.json');
-    if (response.ok) {
-        let json = await response.json();
+    try {
+        const response = await axios.get('data/data.json');
+        let json = response.data;
         let img, html = '',
             item, price, category, color;
         totalItems = json.products.length;
@@ -121,9 +125,6 @@ export async function getProducts() {
                 html += drawProdHTML(liclass, img, item, price, category, color);
             }
             catalogEl.innerHTML = html + '<li aria-hidden="true" class="hidden"></li>';
-/*             if (catalogEl.classList.contains('collection_list')) {
-                checkDisplay();
-            } */
             if (fullCatalogEl) {
                 const mixer = mixitup('.catalog_list', {
                     animation: {
@@ -132,8 +133,7 @@ export async function getProducts() {
                 });
             }
         }
-    }
-    else {
-        console.log("HTTP Error: " + response.status);
+    } catch (error) {
+        console.log(error);
     }
 }
